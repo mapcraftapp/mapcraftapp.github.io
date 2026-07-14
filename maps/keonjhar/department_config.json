@@ -1,0 +1,31 @@
+{
+  "department": "Keonjhar",
+  "departmentId": "keonjhar",
+  "version": 5,
+  "lastUpdated": "2026-07-15",
+
+  "layers": [
+    {
+      "id": "beat_boundary",
+      "name": "Beat Boundary",
+      "folder": "Forest/Beat",
+      "filename": "beat_boundary.kml",
+      "url": "https://mapcraftapp.github.io/maps/keonjhar/beat_boundary.kml",
+      "type": "kml",
+      "visible": true,
+      "editable": false,
+      "version": 3
+    },
+    {
+      "id": "range_boundary",
+      "name": "Range Boundary",
+      "folder": "Forest/Range",
+      "filename": "range_boundary.kml",
+      "url": "https://mapcraftapp.github.io/maps/keonjhar/range_boundary.kml",
+      "type": "kml",
+      "visible": true,
+      "editable": false,
+      "version": 2
+    }
+  ]
+}
