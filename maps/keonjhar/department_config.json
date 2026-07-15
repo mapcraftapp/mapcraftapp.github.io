@@ -14,18 +14,8 @@
       "type": "kml",
       "visible": true,
       "editable": false,
-      "version": 3
+      "version": 1
     },
     {
-      "id": "range_boundary",
-      "name": "Range Boundary",
-      "folder": "Forest/Range",
-      "filename": "range_boundary.kml",
-      "url": "https://mapcraftapp.github.io/maps/keonjhar/range_boundary.kml",
-      "type": "kml",
-      "visible": true,
-      "editable": false,
-      "version": 2
-    }
   ]
 }
