@@ -1,0 +1,21 @@
+{
+  "name": "MapCraft Documentation",
+  "short_name": "MapCraftDocs",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1B5E20",
+  "description": "Complete user manual and documentation for MapCraft GIS application.",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/144/explore.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/explore.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

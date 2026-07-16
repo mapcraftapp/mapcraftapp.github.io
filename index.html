@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapCraft Documentation — Professional GIS Guide</title>
+    <meta name="description" content="Complete user manual and technical documentation for MapCraft Android GIS application. Learn how to map, survey, sync, and record networks.">
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1B5E20">
+</head>
+<body class="light-theme">
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle Sidebar">
+                <span class="material-symbols-rounded">menu</span>
+            </button>
+            
+            <a href="#home" class="logo">
+                <span class="material-symbols-rounded logo-icon">explore</span>
+                <span class="logo-text">MapCraft<span class="logo-accent">Docs</span></span>
+            </a>
+
+            <!-- Search Bar Trigger -->
+            <div class="search-trigger" id="search-trigger-btn">
+                <span class="material-symbols-rounded">search</span>
+                <span class="search-placeholder">Search documentation...</span>
+                <span class="search-shortcut">Ctrl + K</span>
+            </div>
+
+            <div class="header-actions">
+                <a href="#download" class="nav-link hide-mobile">Download APK</a>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode">
+                    <span class="material-symbols-rounded" id="theme-icon">dark_mode</span>
+                </button>
+                <a href="#professional_mode" class="cta-btn hide-mobile">Professional Mode</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar-nav">
+            <div class="sidebar-wrapper">
+                <nav class="sidebar-menu" id="sidebar-menu-list">
+                    <!-- Dynamic Menu Items Will Be Injected Here -->
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" id="breadcrumbs-nav" aria-label="Breadcrumb">
+                <!-- Dynamic Breadcrumbs -->
+            </nav>
+
+            <!-- Dynamic Content Slot -->
+            <article class="content" id="doc-content-area">
+                <!-- Content will be rendered dynamically by app.js -->
+            </article>
+
+            <!-- Bottom Navigation -->
+            <nav class="prev-next-nav" id="prev-next-navigation">
+                <!-- Dynamic Prev/Next Buttons -->
+            </nav>
+
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div>
+                        <h4>MapCraft</h4>
+                        <p>High-performance Android GIS app for offline mapping, surveying, and forest boundary tracking.</p>
+                    </div>
+                    <div>
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#getting_started">Getting Started</a></li>
+                            <li><a href="#download">Downloads</a></li>
+                            <li><a href="#changelog">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#faq">FAQs</a></li>
+                            <li><a href="#troubleshooting">Troubleshooting</a></li>
+                            <li><a href="#contact">Contact Developer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 MapCraft App. All rights reserved. | <a href="#privacy_policy">Privacy Policy</a></p>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Right Table of Contents Sidebar -->
+        <aside class="toc-sidebar hide-tablet" id="toc-container">
+            <div class="toc-wrapper">
+                <h3>ON THIS PAGE</h3>
+                <nav id="toc-list">
+                    <!-- Dynamic Table of Contents -->
+                </nav>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="search-modal-overlay">
+        <div class="search-box">
+            <div class="search-header">
+                <span class="material-symbols-rounded">search</span>
+                <input type="text" id="search-input" placeholder="Type to search..." autocomplete="off">
+                <button id="search-close-btn" class="icon-btn" aria-label="Close Search">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+            <div class="search-results" id="search-results-list">
+                <!-- Search results will show here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox" id="lightbox-overlay">
+        <span class="lightbox-close" id="lightbox-close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption-text"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="icon-btn" aria-label="Back to Top">
+        <span class="material-symbols-rounded">arrow_upward</span>
+    </button>
+
+    <!-- App Script -->
+    <script src="js/docs-data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(function() {
+                console.log('Service Worker Registered');
+            });
+        }
+    </script>
+</body>
+</html>
