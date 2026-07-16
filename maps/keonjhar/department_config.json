@@ -1,7 +1,7 @@
 {
   "department": "Keonjhar",
   "departmentId": "keonjhar",
-  "version": 5,
+  "version": 1,
   "lastUpdated": "2026-07-15",
 
   "layers": [
@@ -14,7 +14,7 @@
       "type": "kml",
       "visible": true,
       "editable": false,
-      "version": 1
+      "version": 1,
     },
     
   ]
