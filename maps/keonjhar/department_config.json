@@ -6,11 +6,11 @@
 
   "layers": [
     {
-      "id": "beat_boundary",
-      "name": "Beat Boundary",
-      "folder": "Forest/Beat",
-      "filename": "beat_boundary.kml",
-      "url": "https://mapcraftapp.github.io/maps/keonjhar/beat_boundary.kml",
+      "id": "KEONJHART",
+      "name": "kEONJHART",
+      "folder": "KEONJHART",
+      "filename": "KEONJHART.kml",
+      "url": "https://mapcraftapp.github.io/maps/keonjhar/KEONJHART.kml",
       "type": "kml",
       "visible": true,
       "editable": false,
