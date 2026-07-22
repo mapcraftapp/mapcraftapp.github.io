@@ -17,7 +17,7 @@
       "version": 1,
     },
       {
-      "id": "Beat",
+      "id": "beat_keonjhart",
       "name": "Beat",
       "folder": "KEONJHAR(T)/Beat",
       "filename": "beat_keonjhart.kml",
@@ -28,7 +28,7 @@
       "version": 1,
         },
         {
-      "id": "Compartment",
+      "id": "compartment",
       "name": "Compartment",
       "folder": "KEONJHAR(T)/Compartment",
       "filename": "compartment.kml",
