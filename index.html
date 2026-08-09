@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MapCraft | Professional GIS &amp; Field Mapping</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d6e3ff",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-bright": "#2c3a4c",
+                        "inverse-on-surface": "#233143",
+                        "on-tertiary": "#263143",
+                        "on-primary-fixed-variant": "#39475f",
+                        "on-surface-variant": "#c5c6cd",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "on-primary-container": "#74829d",
+                        "on-background": "#d4e4fa",
+                        "tertiary": "#bcc7de",
+                        "surface-container-high": "#1c2b3c",
+                        "tertiary-container": "#0e192a",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#d8e3fb",
+                        "on-secondary-container": "#00311f",
+                        "error": "#ffb4ab",
+                        "surface-container": "#122131",
+                        "on-surface": "#d4e4fa",
+                        "on-tertiary-fixed": "#111c2d",
+                        "inverse-primary": "#515f78",
+                        "on-tertiary-container": "#778298",
+                        "surface-dim": "#051424",
+                        "secondary-container": "#00a572",
+                        "on-secondary-fixed": "#002113",
+                        "surface-tint": "#b9c7e4",
+                        "background": "#051424",
+                        "outline": "#8f9097",
+                        "on-secondary": "#003824",
+                        "surface-container-highest": "#273647",
+                        "surface-container-low": "#0d1c2d",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "outline-variant": "#44474d",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#d4e4fa",
+                        "secondary": "#4edea3",
+                        "primary-container": "#0a192f",
+                        "surface-variant": "#273647",
+                        "on-primary": "#233148",
+                        "primary": "#b9c7e4",
+                        "surface-container-lowest": "#010f1f",
+                        "surface": "#051424",
+                        "on-primary-fixed": "#0d1c32",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#005236"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Geist"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-md": ["Geist"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    "animation": {
+                        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+                        "page-fade": "pageFade 0.6s ease-out forwards",
+                        "system-flicker": "systemFlicker 3s infinite",
+                        "pulse-slow": "pulseSlow 2s infinite"
+                    },
+                    "keyframes": {
+                        fadeInUp: {
+                            "0%": { opacity: "0", transform: "translateY(20px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" }
+                        },
+                        pageFade: {
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" }
+                        },
+                        systemFlicker: {
+                            "0%, 100%": { opacity: "1" },
+                            "50%": { opacity: "0.8" },
+                            "75%": { opacity: "0.4" },
+                            "85%": { opacity: "1" }
+                        },
+                        pulseSlow: {
+                            "0%, 100%": { opacity: "1", transform: "scale(1)" },
+                            "50%": { opacity: "0.7", transform: "scale(1.1)" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #030d17; /* Darker background for better contrast */
+            color: #d4e4fa;
+        }
+        
+        /* Layered Grid Pattern */
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(143, 144, 151, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(143, 144, 151, 0.05) 1px, transparent 1px),
+                linear-gradient(to right, rgba(143, 144, 151, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(143, 144, 151, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px;
+            background-position: center center;
+        }
+
+        /* Radial Glows */
+        .glow-bg {
+            position: relative;
+        }
+        .glow-bg::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(78, 222, 163, 0.05) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Refined Glassmorphism */
+        .glass-panel {
+            background: rgba(13, 28, 45, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(143, 144, 151, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #4edea3 0%, #b9c7e4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Tech Borders & Hover Effects */
+        .tech-border {
+            border: 1px solid rgba(143, 144, 151, 0.15);
+            background: linear-gradient(180deg, rgba(13, 28, 45, 0.4) 0%, rgba(5, 20, 36, 0.6) 100%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-border::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            box-shadow: inset 0 0 0 1px rgba(78, 222, 163, 0);
+            transition: box-shadow 0.4s ease;
+            pointer-events: none;
+        }
+
+        .tech-border:hover {
+            transform: translateY(-4px) scale(1.01);
+            background: linear-gradient(180deg, rgba(13, 28, 45, 0.6) 0%, rgba(5, 20, 36, 0.8) 100%);
+            box-shadow: 0 12px 24px -10px rgba(78, 222, 163, 0.25);
+        }
+        
+        .tech-border:hover::after {
+            box-shadow: inset 0 0 0 1px rgba(78, 222, 163, 0.4);
+        }
+
+        /* Sidebar ToC */
+        .doc-sidebar {
+            border-left: 1px solid rgba(143, 144, 151, 0.1);
+        }
+        .doc-sidebar-link {
+            position: relative;
+            padding-left: 1.5rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+        .doc-sidebar-link::before {
+            content: '';
+            position: absolute;
+            left: -1px; /* Align with border */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: transparent;
+            transition: background-color 0.2s ease, height 0.2s ease;
+        }
+        .doc-sidebar-link.active {
+            color: #4edea3;
+            font-weight: 500;
+        }
+        .doc-sidebar-link.active::before {
+            background-color: #4edea3;
+        }
+        .doc-sidebar-link:hover:not(.active) {
+            transform: translateX(4px);
+            color: #4edea3;
+        }
+        .doc-sidebar-link:hover:not(.active)::before {
+            background-color: rgba(143, 144, 151, 0.4);
+        }
+        
+        .nav-link.active {
+            color: #4edea3;
+            position: relative;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #4edea3;
+        }
+
+        /* Code Block syntax highlighting (simplified for HTML) */
+        .token-keyword { color: #6ffbbe; }
+        .token-string { color: #b9c7e4; }
+        .token-comment { color: #8f9097; }
+        .token-punctuation { color: #d4e4fa; }
+
+        /* UI Noise */
+        .ui-noise {
+            position: relative;
+        }
+        .ui-noise::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Intersection Observer Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-stagger-1 { transition-delay: 0.1s; }
+        .scroll-stagger-2 { transition-delay: 0.2s; }
+        .scroll-stagger-3 { transition-delay: 0.3s; }
+        
+        /* Markdown Dynamic Rendering Styles */
+        .markdown-body {
+            font-family: 'Inter', sans-serif;
+            color: #d4e4fa;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #fff;
+            margin-top: 2.5em;
+            margin-bottom: 1em;
+            font-weight: 600;
+        }
+
+        .markdown-body h1 { 
+            font-size: 2.5rem; 
+            color: #4edea3; 
+            border-bottom: 1px solid rgba(143, 144, 151, 0.2); 
+            padding-bottom: 0.5rem; 
+            margin-top: 1em;
+        }
+        .markdown-body h2 { 
+            font-size: 1.8rem; 
+            color: #b9c7e4; 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .markdown-body h3 { font-size: 1.3rem; color: #6ffbbe; }
+        .markdown-body h4 { font-size: 1.1rem; color: #fff; }
+        
+        .markdown-body p { margin-bottom: 1.2em; color: rgba(212, 228, 250, 0.85); }
+        .markdown-body ul, .markdown-body ol { margin-bottom: 1.5em; padding-left: 1.5em; }
+        .markdown-body li { margin-bottom: 0.5em; }
+        .markdown-body ul li { list-style-type: none; position: relative; padding-left: 1.2em; }
+        .markdown-body ul li::before {
+            content: '>';
+            position: absolute;
+            left: -0.2em;
+            color: #4edea3;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+        .markdown-body ol li { list-style-type: decimal; color: #4edea3; }
+        .markdown-body ol li span { color: rgba(212, 228, 250, 0.85); }
+        
+        .markdown-body strong { color: #fff; font-weight: 600; }
+        .markdown-body a { color: #4edea3; text-decoration: none; border-bottom: 1px dashed rgba(78, 222, 163, 0.5); transition: all 0.2s; }
+        .markdown-body a:hover { color: #6ffbbe; border-bottom: 1px solid #6ffbbe; }
+        
+        .markdown-body code {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(13, 28, 45, 0.8);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #6ffbbe;
+            border: 1px solid rgba(143, 144, 151, 0.2);
+        }
+
+        .markdown-body pre {
+            background: rgba(5, 20, 36, 0.8);
+            padding: 1.5em;
+            border-radius: 12px;
+            overflow-x: auto;
+            border: 1px solid rgba(143, 144, 151, 0.2);
+            margin-bottom: 2em;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .markdown-body pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #d4e4fa;
+        }
+
+        .markdown-body blockquote {
+            border-left: 3px solid #4edea3;
+            padding-left: 1.5em;
+            margin-left: 0;
+            margin-bottom: 2em;
+            color: rgba(212, 228, 250, 0.8);
+            background: linear-gradient(90deg, rgba(78, 222, 163, 0.08) 0%, transparent 100%);
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        
+        .markdown-body hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(143, 144, 151, 0.3), transparent);
+            margin: 3em 0;
+        }
+
+        .markdown-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+        
+        .markdown-body th {
+            text-align: left;
+            padding: 12px 16px;
+            background: rgba(0,0,0,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .markdown-body td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .markdown-body tr:hover td {
+            background: rgba(78, 222, 163, 0.05);
+        }
+
+        /* Search Highlight */
+        .search-highlight {
+            background-color: rgba(78, 222, 163, 0.3);
+            color: #fff;
+            padding: 0 2px;
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(78, 222, 163, 0.4);
+        }
+
+        /* Loader */
+        .loader {
+            border: 3px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            border-top: 3px solid #4edea3;
+            width: 40px;
+            height: 40px;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-secondary/30 selection:text-secondary-fixed grid-bg relative animate-page-fade">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 transition-all duration-300 ease-in-out font-mono">
+<div class="flex justify-between items-center px-margin py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-headline-sm text-[20px] font-bold text-on-surface tracking-tight hover:text-secondary transition-colors cursor-pointer" onclick="loadTab('features')">MapCraft_Doc</span>
+<span class="text-secondary/60 hidden sm:inline text-xs bg-secondary/10 px-2 py-1 rounded border border-secondary/20">v3.0.4</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm">
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('manual')" id="tab-manual">/manual</a>
+<a class="nav-link active text-secondary font-medium transition-colors" href="#" onclick="loadTab('features')" id="tab-features">/features</a>
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('faq')" id="tab-faq">/faq</a>
+<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('tutorials')" id="tab-tutorials">/tutorials</a>
+</div>
+<div class="flex items-center gap-4">
+<!-- Search Bar -->
+<div class="relative hidden sm:block w-48 lg:w-64">
+    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
+    <input type="text" id="searchInput" class="w-full bg-black/40 border border-white/10 rounded-full py-1.5 pl-9 pr-4 text-xs text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 outline-none transition-all" placeholder="Search database...">
+</div>
+<button class="bg-transparent border border-secondary/40 text-secondary px-4 py-1.5 rounded font-mono text-xs hover:bg-secondary/10 hover:border-secondary hover:shadow-[0_0_15px_rgba(78,222,163,0.2)] transition-all flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                    Initialize()
+                </button>
+</div>
+</div>
+</nav>
+
+<!-- Main Content -->
+<main class="flex-grow pt-28 pb-20 relative z-10 glow-bg">
+<!-- Hero Section -->
+<section id="hero-section" class="relative pt-12 pb-20 px-margin overflow-hidden scroll-animate is-visible">
+<div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-3 glass-panel px-4 py-2 rounded-full w-max font-mono text-[11px] text-secondary border-secondary/20 tracking-wide uppercase animate-system-flicker">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>SYSTEM.STATUS: ONLINE [v3.0]</span>
+<span class="px-2 py-0.5 bg-secondary/20 rounded text-secondary-fixed transition-colors hover:bg-secondary/30">RTK SUPPORT</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-4xl md:text-[56px] leading-[1.1] font-bold text-on-surface tracking-tight scroll-animate scroll-stagger-1 is-visible">
+                        Professional GIS. <br/>
+<span class="text-gradient font-mono tracking-normal text-3xl md:text-[48px]">&lt;Field Mapping/&gt;</span><br/>
+                        Anywhere.
+                    </h1>
+<p class="font-body-lg text-lg text-on-surface-variant/80 max-w-xl font-mono text-sm leading-relaxed border-l-2 border-outline-variant/30 pl-4 mt-2 scroll-animate scroll-stagger-2 is-visible">
+                        &gt; MapCraft puts professional mapping, GPS, surveying, field data collection, and GIS tools directly in your hands — even when you're working completely offline.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-6 scroll-animate scroll-stagger-3 is-visible">
+<button class="bg-secondary text-on-secondary px-8 py-3.5 rounded font-mono text-sm font-bold flex items-center justify-center gap-3 hover:bg-secondary-fixed hover:scale-105 transition-all shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:shadow-[0_0_30px_rgba(78,222,163,0.5)] group">
+<span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" style="font-variation-settings: 'FILL' 1;">download</span>
+                            Execute: Get_MapCraft
+                        </button>
+<button class="glass-panel text-on-surface px-8 py-3.5 rounded font-mono text-sm hover:bg-surface-container/50 hover:border-secondary/50 hover:text-secondary transition-all flex items-center justify-center gap-3 group" onclick="loadTab('manual')">
+                            Read Manual
+                            <span class="material-symbols-outlined text-secondary/70 group-hover:text-secondary transition-colors">menu_book</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-16 md:mt-0 scroll-animate scroll-stagger-2 is-visible">
+<div class="relative w-full max-w-[360px] mx-auto z-10 glass-panel p-3 rounded-2xl ui-noise transition-transform duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 bg-secondary/10 blur-[100px] rounded-full z-[-1]"></div>
+<img class="w-full h-auto rounded-xl relative z-20 border border-white/10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9-QqqkkeB_xqTSguKWRNaXGLRE_P1VnJPSTK0lF7s45azebo38varpCzJ-sUs7EPL0aMZyD9VkcAu5Q0jdEfCvhPkJvKk_Fz_KEgy1cbWiE6uSu4IlL3OVrfK5YnxTpgaez1QCu3Lr9PPjpe6lVxzCnK2rm68ZmYclM9OSkv3QKm6WRuIEjGho7j_xE_GWT5kTK2UKq5Tsdm0lE0ZvWIQw8bi_eOhNV_LhFy9tngIVdxRti9b6ztFQ"/>
+<!-- Floating Badges -->
+<div class="absolute -top-5 -left-6 glass-panel px-3 py-2 rounded-lg font-mono text-[11px] flex items-center gap-2 z-30 shadow-xl text-secondary border border-secondary/30 animate-system-flicker">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="material-symbols-outlined text-[14px]">satellite_alt</span>
+<span>GNSS_ACTIVE</span>
+</div>
+<div class="absolute bottom-16 -right-8 glass-panel px-3 py-2 rounded-lg font-mono text-[11px] flex items-center gap-2 z-30 shadow-xl text-error border border-error/30 transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-[14px]">wifi_off</span>
+<span>OFFLINE_MODE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Documentation Layout Section -->
+<section class="max-w-7xl mx-auto px-margin pt-16 border-t border-white/5 relative">
+    
+    <!-- Loading overlay for transitions -->
+    <div id="loading" class="hidden absolute inset-0 flex flex-col items-start justify-start pt-32 bg-[#051424]/90 rounded-2xl z-30 backdrop-blur-sm w-full h-full">
+        <div class="w-full text-center">
+            <div class="loader"></div>
+            <p class="text-secondary font-mono text-sm tracking-widest uppercase">Connecting Database...</p>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-12">
+        <!-- Sidebar -->
+        <aside class="md:col-span-3 hidden md:block pr-6">
+            <div class="sticky top-32 font-mono text-sm doc-sidebar">
+                <h3 id="sidebar-title" class="text-on-surface-variant font-bold mb-6 uppercase tracking-widest text-[10px] pl-6">Table of Contents</h3>
+                <ul id="sidebar-list" class="space-y-4 text-on-surface-variant/70 text-[13px]">
+                    <!-- Dynamic ToC populated here -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Documentation Content -->
+        <div class="md:col-span-9 space-y-24" id="content-display">
+            <!-- Markdown content will be dynamically injected here, completely preserving the outer layout grid -->
+        </div>
+    </div>
+</section>
+
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#020810] border-t border-white/5 transition-opacity duration-200 mt-12 font-mono relative z-10 scroll-animate">
+<div class="grid grid-cols-2 md:grid-cols-6 gap-gutter px-margin py-12 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-2 group cursor-pointer w-max">
+<span class="material-symbols-outlined text-secondary group-hover:animate-pulse" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-bold text-on-surface tracking-tight group-hover:text-secondary transition-colors">MapCraft_System</span>
+</div>
+<p class="text-[13px] text-on-surface-variant/70 max-w-xs mt-2 leading-relaxed">
+                    &gt; Professional GIS tools engineered for precision fieldwork and geospatial analysis.
+                </p>
+<p class="text-[11px] text-on-surface-variant/40 mt-6 hover:text-on-surface-variant/70 transition-colors">
+                    [EOF] © 2024 MapCraft GIS Solutions.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<h4 class="text-on-surface mb-2 text-sm font-semibold tracking-wide">// Product</h4>
+<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/features</a>
+<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/solutions</a>
+</div>
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<h4 class="text-on-surface mb-2 text-sm font-semibold tracking-wide">// Company</h4>
+<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/resources</a>
+<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/support</a>
+</div>
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<h4 class="text-on-surface mb-2 text-sm font-semibold tracking-wide">// Legal</h4>
+<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/privacy</a>
+<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/terms</a>
+</div>
+</div>
+</footer>
+
+<script>
+    // Intersection Observer setup
+    function setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+    }
+
+    // Database Configuration
+    const markdownFiles = {
+        'manual': { path: 'file/MASTER_MANUAL_BOOK.md', cache: null },
+        'features': { path: 'file/HIGHLIGHT_FEATURES.md', cache: null },
+        'faq': { path: 'file/MASTER_FAQ.md', cache: null },
+        'tutorials': { path: 'file/TUTORIALS.md', cache: null }
+    };
+
+    let currentTab = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setupObserver();
+        
+        // Check if there's a hash in the URL to load a specific tab
+        const hash = window.location.hash.replace('#', '');
+        if (markdownFiles[hash]) {
+            loadTab(hash);
+        } else {
+            loadTab('features');
+        }
+
+        // Global Search
+        const searchInput = document.getElementById('searchInput');
+        let debounceTimer;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                const query = e.target.value.trim();
+                if (query.length > 2) {
+                    performGlobalSearch(query);
+                } else if (query.length === 0) {
+                    loadTab(currentTab || 'features'); 
+                }
+            }, 400);
+        });
+    });
+
+    async function loadTab(tabKey) {
+        currentTab = tabKey;
+        
+        // Update URL Hash for easy sharing
+        if (window.history.pushState) {
+            window.history.pushState(null, null, '#' + tabKey);
+        } else {
+            window.location.hash = '#' + tabKey;
+        }
+        
+        // Update Nav UI
+        document.querySelectorAll('.nav-link').forEach(el => {
+            el.classList.remove('active', 'text-secondary', 'font-medium');
+            el.classList.add('text-on-surface-variant');
+        });
+        const activeTab = document.getElementById(`tab-${tabKey}`);
+        if(activeTab) {
+            activeTab.classList.add('active', 'text-secondary', 'font-medium');
+            activeTab.classList.remove('text-on-surface-variant');
+        }
+
+        const contentDiv = document.getElementById('content-display');
+        const sidebarList = document.getElementById('sidebar-list');
+        const loader = document.getElementById('loading');
+        
+        loader.classList.remove('hidden');
+        document.getElementById('sidebar-title').innerText = "Table of Contents";
+
+        try {
+            const markdownText = await fetchMarkdown(tabKey);
+            
+            // Custom renderer to add IDs to headers for TOC linking
+            const renderer = new marked.Renderer();
+            const toc = [];
+            
+            renderer.heading = function (text, level) {
+                const slug = text.toLowerCase().replace(/[^\w]+/g, '-');
+                // Only collect h2 for Sidebar TOC
+                if (level === 2) {
+                    toc.push({ text: text, slug: slug });
+                    return `<h2 id="${slug}" class="scroll-animate"><span class="text-secondary font-mono text-xl bg-secondary/10 p-2 rounded mr-4">#</span> ${text}</h2>`;
+                }
+                return `<h${level} id="${slug}">${text}</h${level}>`;
+            };
+
+            const htmlContent = marked.parse(markdownText, { renderer: renderer });
+            
+            // Inject into layout
+            contentDiv.innerHTML = `<div class="markdown-body w-full pb-32 animate-fade-in-up">${htmlContent}</div>`;
+            
+            // Generate Sidebar dynamically based on parsed H2 tags!
+            if (toc.length > 0) {
+                sidebarList.innerHTML = toc.map((item, index) => 
+                    `<li class="doc-sidebar-link ${index === 0 ? 'active' : ''}" onclick="scrollToHeader('${item.slug}', this)">
+                        ${item.text}
+                    </li>`
+                ).join('');
+            } else {
+                sidebarList.innerHTML = `<li class="text-on-surface-variant/50 italic">No sections found.</li>`;
+            }
+
+            setupObserver(); // re-observe newly injected content
+
+        } catch (error) {
+            contentDiv.innerHTML = `
+                <div class="tech-border p-8 rounded-xl text-error">
+                    <h3 class="font-bold font-mono text-xl mb-4">Error 404: Database Not Found</h3>
+                    <p>Failed to read from <code>${markdownFiles[tabKey]?.path}</code>.</p>
+                    <p class="mt-4 text-sm opacity-80 text-on-surface-variant">Note: Modern browsers block local file loading via JavaScript (CORS). You must run this site through a local server.</p>
+                    <div class="mt-4 bg-black/40 p-4 rounded font-mono text-sm text-secondary">
+                        <p># Python</p>
+                        <p>python -m http.server 8000</p>
+                        <br/>
+                        <p># NodeJS</p>
+                        <p>npx serve</p>
+                    </div>
+                </div>`;
+            sidebarList.innerHTML = '';
+        } finally {
+            setTimeout(() => loader.classList.add('hidden'), 300); // slight delay for smooth visual transition
+        }
+    }
+
+    async function fetchMarkdown(key) {
+        if (markdownFiles[key].cache !== null) {
+            return markdownFiles[key].cache;
+        }
+        const response = await fetch(`${markdownFiles[key].path}?t=${new Date().getTime()}`);
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const text = await response.text();
+        markdownFiles[key].cache = text;
+        return text;
+    }
+
+    function scrollToHeader(slug, element) {
+        // Update active class
+        document.querySelectorAll('.doc-sidebar-link').forEach(el => el.classList.remove('active'));
+        if(element) element.classList.add('active');
+
+        // Scroll
+        const header = document.getElementById(slug);
+        if (header) {
+            const y = header.getBoundingClientRect().top + window.scrollY - 120; // offset for sticky nav
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    }
+
+    async function performGlobalSearch(query) {
+        const loader = document.getElementById('loading');
+        const contentDiv = document.getElementById('content-display');
+        const sidebarList = document.getElementById('sidebar-list');
+        
+        loader.classList.remove('hidden');
+        document.getElementById('sidebar-title').innerText = "Search Results";
+        
+        document.querySelectorAll('.nav-link').forEach(el => {
+            el.classList.remove('active', 'text-secondary', 'font-medium');
+            el.classList.add('text-on-surface-variant');
+        });
+
+        try {
+            let allResultsHtml = '';
+            let tocResults = [];
+            const lowerQuery = query.toLowerCase();
+
+            for (const key of Object.keys(markdownFiles)) {
+                const text = await fetchMarkdown(key);
+                const sections = text.split('\n\n');
+                let fileHasMatch = false;
+                let fileResults = `<div id="search-${key}" class="mb-12"><h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 pb-4 border-b border-white/5"><span class="text-secondary font-mono text-xl bg-secondary/10 p-2 rounded">/</span> Matches in ${key}</h2><div class="space-y-4">`;
+
+                sections.forEach(section => {
+                    if (section.toLowerCase().includes(lowerQuery)) {
+                        fileHasMatch = true;
+                        let safeSection = escapeHtml(section.substring(0, 400)) + (section.length > 400 ? '...' : '');
+                        const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+                        safeSection = safeSection.replace(regex, '<span class="search-highlight">$1</span>');
+                        
+                        const snippetHtml = marked.parse(safeSection);
+                        fileResults += `<div class="tech-border p-6 rounded-xl cursor-pointer" onclick="loadTab('${key}')">${snippetHtml}</div>`;
+                    }
+                });
+
+                fileResults += `</div></div>`;
+                if (fileHasMatch) {
+                    allResultsHtml += fileResults;
+                    tocResults.push({ text: `Matches in /${key}`, slug: `search-${key}` });
+                }
+            }
+
+            if (allResultsHtml === '') {
+                contentDiv.innerHTML = `<div class="tech-border p-8 rounded-xl"><p class="text-on-surface-variant">No results found for "<strong>${escapeHtml(query)}</strong>".</p></div>`;
+                sidebarList.innerHTML = '';
+            } else {
+                contentDiv.innerHTML = `<div class="markdown-body w-full pb-32 animate-fade-in-up">${allResultsHtml}</div>`;
+                sidebarList.innerHTML = tocResults.map((item, index) => 
+                    `<li class="doc-sidebar-link ${index === 0 ? 'active' : ''}" onclick="scrollToHeader('${item.slug}', this)">
+                        ${item.text}
+                    </li>`
+                ).join('');
+            }
+
+        } catch (error) {
+            contentDiv.innerHTML = `<div class="tech-border p-8 rounded-xl text-error"><p>Search failed due to file loading errors. Ensure server is running.</p></div>`;
+        } finally {
+            loader.classList.add('hidden');
+        }
+    }
+
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+    
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); 
+    }
+</script>
+</body></html>
