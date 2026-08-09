@@ -3,6 +3,53 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MapCraft | Professional GIS &amp; Field Mapping</title>
+<meta name="description" content="MapCraft GIS is a professional, offline-capable mapping and field data collection application designed for precision surveying and spatial analysis." />
+<meta name="keywords" content="GIS, mapping, field data collection, surveying, offline maps, shapefile, KML, GeoJSON, professional GIS" />
+<meta name="author" content="MapCraft GIS Solutions" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://mapcraft.io" />
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="MapCraft | Professional GIS & Field Mapping" />
+<meta property="og:description" content="MapCraft puts professional mapping, GPS, surveying, and GIS tools directly in your hands — even when you're working completely offline." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="./logo.png" />
+<meta property="og:url" content="https://mapcraft.io" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MapCraft | Professional GIS & Field Mapping" />
+<meta name="twitter:description" content="Advanced GIS tools for precision fieldwork." />
+<meta name="twitter:image" content="./logo.png" />
+
+<!-- AI & Crawler Structured Data -->
+<meta name="googlebot" content="index, follow, snippet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MapCraft GIS",
+  "operatingSystem": "Android",
+  "applicationCategory": "BusinessApplication",
+  "description": "Professional GIS and field mapping tool supporting offline maps, precise GPS, and spatial data collection.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1024"
+  },
+  "featureList": [
+    "Offline Maps",
+    "Precision GPS and RTK Support",
+    "GeoJSON, KML, Shapefile, CSV Support",
+    "Field Data Collection and Surveying"
+  ]
+}
+</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -13,79 +60,61 @@
             theme: {
                 extend: {
                     "colors": {
-                        "primary-fixed": "#d6e3ff",
-                        "secondary-fixed": "#6ffbbe",
-                        "surface-bright": "#2c3a4c",
-                        "inverse-on-surface": "#233143",
-                        "on-tertiary": "#263143",
-                        "on-primary-fixed-variant": "#39475f",
-                        "on-surface-variant": "#c5c6cd",
-                        "tertiary-fixed-dim": "#bcc7de",
-                        "on-primary-container": "#74829d",
-                        "on-background": "#d4e4fa",
-                        "tertiary": "#bcc7de",
-                        "surface-container-high": "#1c2b3c",
-                        "tertiary-container": "#0e192a",
-                        "secondary-fixed-dim": "#4edea3",
-                        "on-error-container": "#ffdad6",
-                        "tertiary-fixed": "#d8e3fb",
-                        "on-secondary-container": "#00311f",
-                        "error": "#ffb4ab",
-                        "surface-container": "#122131",
-                        "on-surface": "#d4e4fa",
-                        "on-tertiary-fixed": "#111c2d",
-                        "inverse-primary": "#515f78",
-                        "on-tertiary-container": "#778298",
-                        "surface-dim": "#051424",
-                        "secondary-container": "#00a572",
-                        "on-secondary-fixed": "#002113",
-                        "surface-tint": "#b9c7e4",
-                        "background": "#051424",
-                        "outline": "#8f9097",
-                        "on-secondary": "#003824",
-                        "surface-container-highest": "#273647",
-                        "surface-container-low": "#0d1c2d",
-                        "on-tertiary-fixed-variant": "#3c475a",
-                        "outline-variant": "#44474d",
-                        "error-container": "#93000a",
-                        "inverse-surface": "#d4e4fa",
-                        "secondary": "#4edea3",
-                        "primary-container": "#0a192f",
-                        "surface-variant": "#273647",
-                        "on-primary": "#233148",
-                        "primary": "#b9c7e4",
-                        "surface-container-lowest": "#010f1f",
-                        "surface": "#051424",
-                        "on-primary-fixed": "#0d1c32",
-                        "primary-fixed-dim": "#b9c7e4",
-                        "on-error": "#690005",
-                        "on-secondary-fixed-variant": "#005236"
+                        "primary-fixed": "var(--c-primary-fixed)",
+                        "secondary-fixed": "var(--c-secondary-fixed)",
+                        "surface-bright": "var(--c-surface-bright)",
+                        "inverse-on-surface": "var(--c-inverse-on-surface)",
+                        "on-tertiary": "var(--c-on-tertiary)",
+                        "on-primary-fixed-variant": "var(--c-on-primary-fixed-variant)",
+                        "on-surface-variant": "var(--c-on-surface-variant)",
+                        "tertiary-fixed-dim": "var(--c-tertiary-fixed-dim)",
+                        "on-primary-container": "var(--c-on-primary-container)",
+                        "on-background": "var(--c-on-background)",
+                        "tertiary": "var(--c-tertiary)",
+                        "surface-container-high": "var(--c-surface-container-high)",
+                        "tertiary-container": "var(--c-tertiary-container)",
+                        "secondary-fixed-dim": "var(--c-secondary-fixed-dim)",
+                        "on-error-container": "var(--c-on-error-container)",
+                        "tertiary-fixed": "var(--c-tertiary-fixed)",
+                        "on-secondary-container": "var(--c-on-secondary-container)",
+                        "error": "var(--c-error)",
+                        "surface-container": "var(--c-surface-container)",
+                        "on-surface": "var(--c-on-surface)",
+                        "on-tertiary-fixed": "var(--c-on-tertiary-fixed)",
+                        "inverse-primary": "var(--c-inverse-primary)",
+                        "on-tertiary-container": "var(--c-on-tertiary-container)",
+                        "surface-dim": "var(--c-surface-dim)",
+                        "secondary-container": "var(--c-secondary-container)",
+                        "on-secondary-fixed": "var(--c-on-secondary-fixed)",
+                        "surface-tint": "var(--c-surface-tint)",
+                        "background": "var(--c-background)",
+                        "outline": "var(--c-outline)",
+                        "on-secondary": "var(--c-on-secondary)",
+                        "surface-container-highest": "var(--c-surface-container-highest)",
+                        "surface-container-low": "var(--c-surface-container-low)",
+                        "on-tertiary-fixed-variant": "var(--c-on-tertiary-fixed-variant)",
+                        "outline-variant": "var(--c-outline-variant)",
+                        "error-container": "var(--c-error-container)",
+                        "inverse-surface": "var(--c-inverse-surface)",
+                        "secondary": "var(--c-secondary)",
+                        "primary-container": "var(--c-primary-container)",
+                        "surface-variant": "var(--c-surface-variant)",
+                        "on-primary": "var(--c-on-primary)",
+                        "primary": "var(--c-primary)",
+                        "surface-container-lowest": "var(--c-surface-container-lowest)",
+                        "surface": "var(--c-surface)",
+                        "on-primary-fixed": "var(--c-on-primary-fixed)",
+                        "primary-fixed-dim": "var(--c-primary-fixed-dim)",
+                        "on-error": "var(--c-on-error)",
+                        "on-secondary-fixed-variant": "var(--c-on-secondary-fixed-variant)",
                     },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "stack-lg": "32px",
-                        "stack-sm": "8px",
-                        "stack-md": "16px",
-                        "base": "4px",
-                        "gutter": "24px",
-                        "margin": "32px"
-                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "spacing": { "stack-lg": "32px", "stack-sm": "8px", "stack-md": "16px", "base": "4px", "gutter": "24px", "margin": "32px" },
                     "fontFamily": {
-                        "label-sm": ["Geist"],
-                        "body-sm": ["Inter"],
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "headline-sm": ["Plus Jakarta Sans"],
-                        "headline-lg-mobile": ["Plus Jakarta Sans"],
-                        "label-md": ["Geist"],
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "mono": ["JetBrains Mono", "monospace"]
+                        "label-sm": ["Geist"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-md": ["Geist"], "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"], "body-lg": ["Inter"], "mono": ["JetBrains Mono", "monospace"]
                     },
                     "animation": {
                         "fade-in-up": "fadeInUp 0.8s ease-out forwards",
@@ -94,716 +123,1686 @@
                         "pulse-slow": "pulseSlow 2s infinite"
                     },
                     "keyframes": {
-                        fadeInUp: {
-                            "0%": { opacity: "0", transform: "translateY(20px)" },
-                            "100%": { opacity: "1", transform: "translateY(0)" }
-                        },
-                        pageFade: {
-                            "0%": { opacity: "0" },
-                            "100%": { opacity: "1" }
-                        },
-                        systemFlicker: {
-                            "0%, 100%": { opacity: "1" },
-                            "50%": { opacity: "0.8" },
-                            "75%": { opacity: "0.4" },
-                            "85%": { opacity: "1" }
-                        },
-                        pulseSlow: {
-                            "0%, 100%": { opacity: "1", transform: "scale(1)" },
-                            "50%": { opacity: "0.7", transform: "scale(1.1)" }
-                        }
+                        fadeInUp: { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+                        pageFade: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
+                        systemFlicker: { "0%, 100%": { opacity: "1" }, "50%": { opacity: "0.8" }, "75%": { opacity: "0.4" }, "85%": { opacity: "1" } },
+                        pulseSlow: { "0%, 100%": { opacity: "1", transform: "scale(1)" }, "50%": { opacity: "0.7", transform: "scale(1.1)" } }
                     }
                 }
             }
         }
     </script>
 <style>
-        body {
-            background-color: #030d17; /* Darker background for better contrast */
-            color: #d4e4fa;
-        }
         
-        /* Layered Grid Pattern */
+    :root {
+        --c-background: #fdfbf7;
+        --c-surface: #ffffff;
+        --c-on-surface: #2d2a26;
+        --c-on-surface-variant: #5c5852;
+        --c-primary: #3b82f6;
+        --c-secondary: #059669;
+        --c-surface-bright: #ffffff;
+        --c-surface-variant: #f3efe6;
+        --c-outline: #d6d1c4;
+        --c-outline-variant: #e8e4d9;
+        --c-error: #ef4444;
+        
+        --glass-bg: rgba(255, 253, 250, 0.75);
+        --glass-border: rgba(45, 42, 38, 0.1);
+        --tech-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 246, 239, 0.9) 100%);
+        --markdown-pre: rgba(249, 246, 239, 0.9);
+        --markdown-code: #2d2a26;
+        --tech-bg-hover: linear-gradient(180deg, rgba(245, 242, 235, 0.95) 0%, rgba(235, 230, 220, 0.9) 100%);
+    }
+    
+    .dark {
+        --c-primary-fixed: #d6e3ff;
+        --c-secondary-fixed: #6ffbbe;
+        --c-surface-bright: #2c3a4c;
+        --c-inverse-on-surface: #233143;
+        --c-on-tertiary: #263143;
+        --c-on-primary-fixed-variant: #39475f;
+        --c-on-surface-variant: #c5c6cd;
+        --c-tertiary-fixed-dim: #bcc7de;
+        --c-on-primary-container: #74829d;
+        --c-on-background: #d4e4fa;
+        --c-tertiary: #bcc7de;
+        --c-surface-container-high: #1c2b3c;
+        --c-tertiary-container: #0e192a;
+        --c-secondary-fixed-dim: #4edea3;
+        --c-on-error-container: #ffdad6;
+        --c-tertiary-fixed: #d8e3fb;
+        --c-on-secondary-container: #00311f;
+        --c-error: #ffb4ab;
+        --c-surface-container: #122131;
+        --c-on-surface: #d4e4fa;
+        --c-on-tertiary-fixed: #111c2d;
+        --c-inverse-primary: #515f78;
+        --c-on-tertiary-container: #778298;
+        --c-surface-dim: #051424;
+        --c-secondary-container: #00a572;
+        --c-on-secondary-fixed: #002113;
+        --c-surface-tint: #b9c7e4;
+        --c-background: #051424;
+        --c-outline: #8f9097;
+        --c-on-secondary: #003824;
+        --c-surface-container-highest: #273647;
+        --c-surface-container-low: #0d1c2d;
+        --c-on-tertiary-fixed-variant: #3c475a;
+        --c-outline-variant: #44474d;
+        --c-error-container: #93000a;
+        --c-inverse-surface: #d4e4fa;
+        --c-secondary: #4edea3;
+        --c-primary-container: #0a192f;
+        --c-surface-variant: #273647;
+        --c-on-primary: #233148;
+        --c-primary: #b9c7e4;
+        --c-surface-container-lowest: #010f1f;
+        --c-surface: #051424;
+        --c-on-primary-fixed: #0d1c32;
+        --c-primary-fixed-dim: #b9c7e4;
+        --c-on-error: #690005;
+        --c-on-secondary-fixed-variant: #005236;
+
+        --glass-bg: rgba(13,28,45,0.6);
+        --glass-border: rgba(143,144,151,0.15);
+        --tech-bg: linear-gradient(180deg, rgba(13,28,45,0.4) 0%, rgba(5,20,36,0.6) 100%);
+        --markdown-pre: rgba(5,20,36,0.8);
+        --markdown-code: #d4e4fa;
+        --tech-bg-hover: linear-gradient(180deg, rgba(13,28,45,0.6) 0%, rgba(5,20,36,0.8) 100%);
+    }
+
+    .markdown-body { font-family: 'Inter', sans-serif; color: var(--c-on-surface); line-height: 1.8; font-weight: 300; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; }
+    .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--c-on-surface); margin-top: 2.5em; margin-bottom: 1em; font-weight: 600; }
+    .markdown-body h1 { font-size: 2.5rem; color: var(--c-secondary); border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; margin-top: 1em; }
+    .markdown-body h2 { font-size: 1.8rem; color: var(--c-primary); padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
+    .markdown-body h3 { font-size: 1.3rem; color: var(--c-secondary-fixed); }
+    .markdown-body h4 { font-size: 1.1rem; color: var(--c-on-surface); }
+    .markdown-body p { margin-bottom: 1.2em; color: var(--c-on-surface-variant); }
+    .markdown-body ul, .markdown-body ol { margin-bottom: 1.5em; padding-left: 1.5em; }
+    .markdown-body li { margin-bottom: 0.5em; color: var(--c-on-surface); }
+    .markdown-body ul li { list-style-type: none; position: relative; padding-left: 1.2em; }
+    .markdown-body ul li::before { content: '>'; position: absolute; left: -0.2em; color: var(--c-secondary); font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
+    .markdown-body ol li { list-style-type: decimal; color: var(--c-on-surface); }
+    .markdown-body strong { color: var(--c-on-surface); font-weight: 600; }
+    .markdown-body a { color: var(--c-secondary); text-decoration: none; border-bottom: 1px dashed var(--c-secondary); transition: all 0.2s; }
+    .markdown-body a:hover { color: var(--c-secondary-fixed); border-bottom: 1px solid var(--c-secondary-fixed); }
+    .markdown-body code { font-family: 'JetBrains Mono', monospace; background: var(--glass-bg); padding: 0.2em 0.4em; border-radius: 4px; font-size: 0.85em; color: var(--c-secondary); border: 1px solid var(--glass-border); }
+    .markdown-body pre { background: var(--markdown-pre); padding: 1.5em; border-radius: 12px; overflow-x: auto; border: 1px solid var(--glass-border); margin-bottom: 2em; max-width: 100%; box-sizing: border-box; }
+    .markdown-body pre code { background: none; padding: 0; border: none; color: var(--markdown-code); white-space: pre-wrap; word-break: break-word; }
+    .markdown-body blockquote { border-left: 3px solid var(--c-secondary); padding-left: 1.5em; margin-left: 0; margin-bottom: 2em; color: var(--c-on-surface-variant); background: var(--glass-bg); padding-top: 1em; padding-bottom: 1em; border-radius: 0 8px 8px 0; }
+    .markdown-body hr { border: 0; height: 1px; background: var(--glass-border); margin: 3em 0; }
+    .markdown-body table { width: 100%; border-collapse: collapse; margin-bottom: 2em; font-size: 0.9em; color: var(--c-on-surface); }
+    .markdown-body th { text-align: left; padding: 12px 16px; background: var(--glass-bg); border-bottom: 1px solid var(--glass-border); color: var(--c-on-surface); }
+    .markdown-body td { padding: 12px 16px; border-bottom: 1px solid var(--glass-border); color: var(--c-on-surface); }
+    .markdown-body tr:hover td { background: var(--tech-bg); }
+
+    * { -webkit-tap-highlight-color: transparent; }
+    body { background-color: var(--c-background); color: var(--c-on-surface); transition: background-color 0.3s, color 0.3s; }
         .grid-bg {
-            background-image: 
-                linear-gradient(to right, rgba(143, 144, 151, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(143, 144, 151, 0.05) 1px, transparent 1px),
-                linear-gradient(to right, rgba(143, 144, 151, 0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(143, 144, 151, 0.02) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(143,144,151,0.05) 1px, transparfent 1px), linear-gradient(to bottom, rgba(143,144,151,0.05) 1px, transparent 1px), linear-gradient(to right, rgba(143,144,151,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(143,144,151,0.02) 1px, transparent 1px);
             background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px;
-            background-position: center center;
         }
+        .glow-bg { position: relative; }
+        .glow-bg::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; background: radial-gradient(circle, rgba(78,222,163,0.05) 0%, transparent 60%); z-index: 0; pointer-events: none; }
+        .glass-panel { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .text-gradient { background: linear-gradient(135deg, #4edea3 0%, #b9c7e4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .tech-border { border: 1px solid rgba(143,144,151,0.15); background: var(--tech-bg); transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275); position: relative; overflow: hidden; }
+        .tech-border::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(78,222,163,0); transition: box-shadow 0.4s ease; pointer-events: none; }
+        .tech-border:hover { transform: translateY(-4px) scale(1.01); background: var(--tech-bg-hover); box-shadow: 0 12px 24px -10px rgba(78,222,163,0.25); }
+        .tech-border:hover::after { box-shadow: inset 0 0 0 1px rgba(78,222,163,0.4); }
+        .doc-sidebar { border-left: 1px solid rgba(143,144,151,0.1); }
+        .doc-sidebar-link { position: relative; padding-left: 1.5rem; transition: color 0.2s ease, transform 0.2s ease; cursor: pointer; }
+        .doc-sidebar-link::before { content: ''; position: absolute; left: -1px; top: 0; bottom: 0; width: 2px; background-color: transparent; transition: background-color 0.2s ease; }
+        .doc-sidebar-link.active { color: #4edea3; font-weight: 500; }
+        .doc-sidebar-link.active::before { background-color: #4edea3; }
+        .doc-sidebar-link:hover:not(.active) { transform: translateX(4px); color: #4edea3; }
+        .doc-sidebar-link:hover:not(.active)::before { background-color: rgba(143,144,151,0.4); }
+        .nav-link.active { color: #4edea3 !important; position: relative; font-weight: 500; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background-color: #4edea3; }
+        .token-keyword { color: #6ffbbe; } .token-string { color: #b9c7e4; } .token-comment { color: #8f9097; } .token-punctuation { color: var(--markdown-code); }
+        .ui-noise { position: relative; }
+        .ui-noise::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E"); pointer-events: none; z-index: 10; }
+        .scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+        .scroll-animate.is-visible { opacity: 1; transform: translateY(0); }
+        .scroll-stagger-1 { transition-delay: 0.1s; } .scroll-stagger-2 { transition-delay: 0.2s; } .scroll-stagger-3 { transition-delay: 0.3s; }
 
-        /* Radial Glows */
-        .glow-bg {
-            position: relative;
-        }
-        .glow-bg::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
-            background: radial-gradient(circle, rgba(78, 222, 163, 0.05) 0%, transparent 60%);
-            z-index: 0;
-            pointer-events: none;
-        }
+        /* FAQ Accordion */
+        .faq-item .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding-top: 0; }
+        .faq-item.open .faq-answer { max-height: 500px; padding-top: 1rem; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-icon { transition: transform 0.3s ease; }
 
-        /* Refined Glassmorphism */
-        .glass-panel {
-            background: rgba(13, 28, 45, 0.6);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(143, 144, 151, 0.15);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
+        /* Feature Card Expand */
+        .feature-card .feature-detail { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin 0.4s ease; margin-top: 0; }
+        .feature-card.open .feature-detail { max-height: 300px; margin-top: 1rem; }
 
-        .text-gradient {
-            background: linear-gradient(135deg, #4edea3 0%, #b9c7e4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
 
-        /* Tech Borders & Hover Effects */
-        .tech-border {
-            border: 1px solid rgba(143, 144, 151, 0.15);
-            background: linear-gradient(180deg, rgba(13, 28, 45, 0.4) 0%, rgba(5, 20, 36, 0.6) 100%);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tech-border::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border-radius: inherit;
-            box-shadow: inset 0 0 0 1px rgba(78, 222, 163, 0);
-            transition: box-shadow 0.4s ease;
-            pointer-events: none;
-        }
 
-        .tech-border:hover {
-            transform: translateY(-4px) scale(1.01);
-            background: linear-gradient(180deg, rgba(13, 28, 45, 0.6) 0%, rgba(5, 20, 36, 0.8) 100%);
-            box-shadow: 0 12px 24px -10px rgba(78, 222, 163, 0.25);
-        }
-        
-        .tech-border:hover::after {
-            box-shadow: inset 0 0 0 1px rgba(78, 222, 163, 0.4);
-        }
-
-        /* Sidebar ToC */
-        .doc-sidebar {
-            border-left: 1px solid rgba(143, 144, 151, 0.1);
-        }
-        .doc-sidebar-link {
-            position: relative;
-            padding-left: 1.5rem;
-            transition: color 0.2s ease, transform 0.2s ease;
-            cursor: pointer;
-        }
-        .doc-sidebar-link::before {
-            content: '';
-            position: absolute;
-            left: -1px; /* Align with border */
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: transparent;
-            transition: background-color 0.2s ease, height 0.2s ease;
-        }
-        .doc-sidebar-link.active {
-            color: #4edea3;
-            font-weight: 500;
-        }
-        .doc-sidebar-link.active::before {
-            background-color: #4edea3;
-        }
-        .doc-sidebar-link:hover:not(.active) {
-            transform: translateX(4px);
-            color: #4edea3;
-        }
-        .doc-sidebar-link:hover:not(.active)::before {
-            background-color: rgba(143, 144, 151, 0.4);
-        }
-        
-        .nav-link.active {
-            color: #4edea3;
-            position: relative;
-        }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #4edea3;
-        }
-
-        /* Code Block syntax highlighting (simplified for HTML) */
-        .token-keyword { color: #6ffbbe; }
-        .token-string { color: #b9c7e4; }
-        .token-comment { color: #8f9097; }
-        .token-punctuation { color: #d4e4fa; }
-
-        /* UI Noise */
-        .ui-noise {
-            position: relative;
-        }
-        .ui-noise::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 10;
-        }
-
-        /* Intersection Observer Animations */
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .scroll-animate.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-stagger-1 { transition-delay: 0.1s; }
-        .scroll-stagger-2 { transition-delay: 0.2s; }
-        .scroll-stagger-3 { transition-delay: 0.3s; }
-        
-        /* Markdown Dynamic Rendering Styles */
-        .markdown-body {
-            font-family: 'Inter', sans-serif;
-            color: #d4e4fa;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-        
-        .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #fff;
-            margin-top: 2.5em;
-            margin-bottom: 1em;
-            font-weight: 600;
-        }
-
-        .markdown-body h1 { 
-            font-size: 2.5rem; 
-            color: #4edea3; 
-            border-bottom: 1px solid rgba(143, 144, 151, 0.2); 
-            padding-bottom: 0.5rem; 
-            margin-top: 1em;
-        }
-        .markdown-body h2 { 
-            font-size: 1.8rem; 
-            color: #b9c7e4; 
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .markdown-body h3 { font-size: 1.3rem; color: #6ffbbe; }
-        .markdown-body h4 { font-size: 1.1rem; color: #fff; }
-        
-        .markdown-body p { margin-bottom: 1.2em; color: rgba(212, 228, 250, 0.85); }
-        .markdown-body ul, .markdown-body ol { margin-bottom: 1.5em; padding-left: 1.5em; }
-        .markdown-body li { margin-bottom: 0.5em; }
-        .markdown-body ul li { list-style-type: none; position: relative; padding-left: 1.2em; }
-        .markdown-body ul li::before {
-            content: '>';
-            position: absolute;
-            left: -0.2em;
-            color: #4edea3;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9em;
-        }
-        .markdown-body ol li { list-style-type: decimal; color: #4edea3; }
-        .markdown-body ol li span { color: rgba(212, 228, 250, 0.85); }
-        
-        .markdown-body strong { color: #fff; font-weight: 600; }
-        .markdown-body a { color: #4edea3; text-decoration: none; border-bottom: 1px dashed rgba(78, 222, 163, 0.5); transition: all 0.2s; }
-        .markdown-body a:hover { color: #6ffbbe; border-bottom: 1px solid #6ffbbe; }
-        
-        .markdown-body code {
-            font-family: 'JetBrains Mono', monospace;
-            background: rgba(13, 28, 45, 0.8);
-            padding: 0.2em 0.4em;
-            border-radius: 4px;
-            font-size: 0.85em;
-            color: #6ffbbe;
-            border: 1px solid rgba(143, 144, 151, 0.2);
-        }
-
-        .markdown-body pre {
-            background: rgba(5, 20, 36, 0.8);
-            padding: 1.5em;
-            border-radius: 12px;
-            overflow-x: auto;
-            border: 1px solid rgba(143, 144, 151, 0.2);
-            margin-bottom: 2em;
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .markdown-body pre code {
-            background: none;
-            padding: 0;
-            border: none;
-            color: #d4e4fa;
-        }
-
-        .markdown-body blockquote {
-            border-left: 3px solid #4edea3;
-            padding-left: 1.5em;
-            margin-left: 0;
-            margin-bottom: 2em;
-            color: rgba(212, 228, 250, 0.8);
-            background: linear-gradient(90deg, rgba(78, 222, 163, 0.08) 0%, transparent 100%);
-            padding-top: 1em;
-            padding-bottom: 1em;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-        }
-        
-        .markdown-body hr {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(143, 144, 151, 0.3), transparent);
-            margin: 3em 0;
-        }
-
-        .markdown-body table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 2em;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9em;
-        }
-        
-        .markdown-body th {
-            text-align: left;
-            padding: 12px 16px;
-            background: rgba(0,0,0,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        .markdown-body td {
-            padding: 12px 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .markdown-body tr:hover td {
-            background: rgba(78, 222, 163, 0.05);
-        }
-
-        /* Search Highlight */
-        .search-highlight {
-            background-color: rgba(78, 222, 163, 0.3);
-            color: #fff;
-            padding: 0 2px;
-            border-radius: 2px;
-            box-shadow: 0 0 8px rgba(78, 222, 163, 0.4);
-        }
-
-        /* Loader */
-        .loader {
-            border: 3px solid rgba(255,255,255,0.1);
-            border-radius: 50%;
-            border-top: 3px solid #4edea3;
-            width: 40px;
-            height: 40px;
-            -webkit-animation: spin 1s linear infinite;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 16px auto;
-        }
+        .search-highlight { background-color: rgba(78,222,163,0.3); color: #fff; padding: 0 2px; border-radius: 2px; box-shadow: 0 0 8px rgba(78,222,163,0.4); }
+        .loader { border: 3px solid rgba(255,255,255,0.1); border-radius: 50%; border-top: 3px solid #4edea3; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 16px auto; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+
+        .px-margin { padding-left: 1rem; padding-right: 1rem; }
+        @media (min-width: 640px) { .px-margin { padding-left: 1.5rem; padding-right: 1.5rem; } }
+        @media (min-width: 1024px) { .px-margin { padding-left: 2rem; padding-right: 2rem; } }
+        @media (max-width: 768px) {
+            .gap-gutter { gap: 1.5rem !important; }
+            .markdown-body h1 { font-size: 2rem; }
+            .markdown-body h2 { font-size: 1.5rem; }
+            .markdown-body pre { padding: 1rem; font-size: 0.8em; }
+        }
+
+        .markdown-body table { display: block; overflow-x: auto; max-width: 100%; border-collapse: collapse; margin-bottom: 2em; font-size: 0.9em; -webkit-overflow-scrolling: touch; }
+        .markdown-body img { max-width: 100%; height: auto; border-radius: 8px; }
     </style>
+    <script>
+        // Check local storage or system preference to prevent FOUC
+        if (localStorage.getItem('theme') === 'light' || (!('theme' in localStorage) && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 </head>
 <body class="antialiased min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-secondary/30 selection:text-secondary-fixed grid-bg relative animate-page-fade">
+<!-- Tech Loader -->
+<div id="tech-loader" class="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center transition-opacity duration-700">
+    <div class="relative w-32 h-32 flex items-center justify-center mb-8">
+        <div class="absolute inset-0 border-t-2 border-secondary rounded-full animate-spin"></div>
+        <div class="absolute inset-2 border-r-2 border-primary rounded-full animate-[spin_1.5s_linear_infinite_reverse]"></div>
+        <span class="material-symbols-outlined text-secondary text-4xl animate-pulse">terminal</span>
+    </div>
+    <h2 class="font-mono text-2xl font-bold text-on-surface tracking-widest uppercase mb-2">MapCraft <span class="text-secondary">System</span></h2>
+    <p class="font-mono text-xs text-on-surface-variant/50 uppercase tracking-widest animate-pulse">Initializing Core Modules...</p>
+</div>
+
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 transition-all duration-300 ease-in-out font-mono">
-<div class="flex justify-between items-center px-margin py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">terminal</span>
-<span class="font-headline-sm text-[20px] font-bold text-on-surface tracking-tight hover:text-secondary transition-colors cursor-pointer" onclick="loadTab('features')">MapCraft_Doc</span>
-<span class="text-secondary/60 hidden sm:inline text-xs bg-secondary/10 px-2 py-1 rounded border border-secondary/20">v3.0.4</span>
+<nav class="fixed top-0 w-full z-50 glass-panel border-b border-black/10 dark:border-white/5 transition-all duration-300 ease-in-out font-mono flex flex-col">
+<div class="flex justify-between items-center px-margin py-3 max-w-7xl mx-auto w-full">
+    <div class="flex items-center gap-3">
+        <img src="./logo.png" alt="MapCraft Logo" class="h-8 w-auto cursor-pointer" onclick="loadTab('features')">
+        <span class="font-headline-sm text-lg sm:text-[20px] font-bold text-on-surface tracking-tight hover:text-secondary transition-colors cursor-pointer pl-1" onclick="loadTab('features')">MapCraft GIS</span>
+        <span id="app-version" class="text-secondary/60 hidden sm:inline text-xs bg-secondary/20 dark:bg-secondary/10 px-2 py-1 rounded border border-secondary/50 dark:border-secondary/20">v3.0.4</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-sm">
+        <a class="nav-link active text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('features')" data-tab="features">/features</a>
+        <a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('manual')" data-tab="manual">/manual</a>
+        <a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('faq')" data-tab="faq">/faq</a>
+        <a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('tutorials')" data-tab="tutorials">/tutorials</a>
+        <a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('contact')" data-tab="contact">/contact</a>
+        <a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('changelog')" data-tab="changelog">/changelog</a>
+    </div>
+    <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme" class="relative w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors overflow-hidden border border-transparent hover:border-black/10 dark:hover:border-white/10" title="Toggle Light/Dark Mode">
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] rotate-0 dark:-rotate-180 opacity-100 dark:opacity-0 scale-100 dark:scale-50">
+                <span class="material-symbols-outlined text-[20px] text-[#f59e0b]">light_mode</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] rotate-180 dark:rotate-0 opacity-0 dark:opacity-100 scale-50 dark:scale-100">
+                <span class="material-symbols-outlined text-[20px] text-secondary">dark_mode</span>
+            </div>
+        </button>
+        <div class="relative hidden sm:block w-48 lg:w-64">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
+            <input type="text" class="search-input-field w-full bg-black/5 dark:bg-black/5 dark:bg-black/40 border border-black/10 dark:border-black/10 dark:border-white/10 rounded-full py-1.5 pl-9 pr-4 text-xs text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 outline-none transition-all font-mono" placeholder="Search docs...">
+        </div>
+        <button aria-label="Initialize App" class="bg-transparent border border-secondary/50 dark:border-secondary/40 text-secondary px-4 py-1.5 rounded font-mono text-xs hover:bg-secondary/20 dark:hover:bg-secondary/20 dark:bg-secondary/10 hover:border-secondary hover:shadow-[0_0_15px_rgba(78,222,163,0.2)] transition-all flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            <span class="hidden sm:inline">Initialize()</span><span class="sm:hidden">Init</span>
+        </button>
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="mobile-menu-btn" aria-label="Open Mobile Menu" onclick="document.getElementById('mobile-dropdown').classList.toggle('hidden')" class="md:hidden flex items-center justify-center p-1 text-on-surface-variant hover:text-secondary transition-colors rounded ml-1">
+            <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+    </div>
 </div>
-<div class="hidden md:flex items-center gap-8 text-sm">
-<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('manual')" id="tab-manual">/manual</a>
-<a class="nav-link active text-secondary font-medium transition-colors" href="#" onclick="loadTab('features')" id="tab-features">/features</a>
-<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('faq')" id="tab-faq">/faq</a>
-<a class="nav-link text-on-surface-variant hover:text-secondary transition-colors" href="#" onclick="loadTab('tutorials')" id="tab-tutorials">/tutorials</a>
-</div>
-<div class="flex items-center gap-4">
-<!-- Search Bar -->
-<div class="relative hidden sm:block w-48 lg:w-64">
-    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
-    <input type="text" id="searchInput" class="w-full bg-black/40 border border-white/10 rounded-full py-1.5 pl-9 pr-4 text-xs text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 outline-none transition-all" placeholder="Search database...">
-</div>
-<button class="bg-transparent border border-secondary/40 text-secondary px-4 py-1.5 rounded font-mono text-xs hover:bg-secondary/10 hover:border-secondary hover:shadow-[0_0_15px_rgba(78,222,163,0.2)] transition-all flex items-center gap-2">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
-                    Initialize()
-                </button>
-</div>
+<!-- Mobile navigation Dropdown -->
+<div id="mobile-dropdown" class="hidden md:hidden w-full flex flex-col px-margin py-2 border-t border-black/10 dark:border-white/5 bg-white dark:bg-[#051424] backdrop-blur absolute top-full left-0 shadow-2xl transition-all">
+    <div class="flex flex-col gap-1 w-full pb-3">
+        <a class="nav-link w-full py-3 px-4 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono font-bold active" href="#" onclick="loadTab('features'); document.getElementById('mobile-dropdown').classList.add('hidden');" data-tab="features">/features</a>
+        <a class="nav-link w-full py-3 px-4 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono font-bold" href="#" onclick="loadTab('manual'); document.getElementById('mobile-dropdown').classList.add('hidden');" data-tab="manual">/manual</a>
+        <a class="nav-link w-full py-3 px-4 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono font-bold" href="#" onclick="loadTab('faq'); document.getElementById('mobile-dropdown').classList.add('hidden');" data-tab="faq">/faq</a>
+        <a class="nav-link w-full py-3 px-4 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono font-bold" href="#" onclick="loadTab('tutorials'); document.getElementById('mobile-dropdown').classList.add('hidden');" data-tab="tutorials">/tutorials</a>
+        <a class="nav-link w-full py-3 px-4 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono font-bold" href="#" onclick="loadTab('contact'); document.getElementById('mobile-dropdown').classList.add('hidden');" data-tab="contact">/contact</a>
+        <a class="nav-link w-full py-3 px-4 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono font-bold" href="#" onclick="loadTab('changelog'); document.getElementById('mobile-dropdown').classList.add('hidden');" data-tab="changelog">/changelog</a>
+    </div>
+    <!-- Mobile search bar -->
+    <div class="w-full pt-3 border-t border-black/10 dark:border-white/5 pb-2">
+        <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
+            <input type="text" class="search-input-field w-full bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-full py-2.5 pl-10 pr-4 text-sm text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 outline-none transition-all font-mono" placeholder="Search docs...">
+        </div>
+    </div>
 </div>
 </nav>
 
+
 <!-- Main Content -->
 <main class="flex-grow pt-28 pb-20 relative z-10 glow-bg">
+
 <!-- Hero Section -->
-<section id="hero-section" class="relative pt-12 pb-20 px-margin overflow-hidden scroll-animate is-visible">
+<section id="hero-section" class="relative pt-4 pb-20 px-margin overflow-hidden scroll-animate is-visible">
 <div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-12 gap-12 items-center">
 <div class="md:col-span-7 flex flex-col gap-6">
-<div class="inline-flex items-center gap-3 glass-panel px-4 py-2 rounded-full w-max font-mono text-[11px] text-secondary border-secondary/20 tracking-wide uppercase animate-system-flicker">
-<span class="material-symbols-outlined text-sm">check_circle</span>
-<span>SYSTEM.STATUS: ONLINE [v3.0]</span>
-<span class="px-2 py-0.5 bg-secondary/20 rounded text-secondary-fixed transition-colors hover:bg-secondary/30">RTK SUPPORT</span>
+    <div class="inline-flex items-center gap-3 glass-panel px-4 py-2 rounded-full w-max font-mono text-[11px] text-secondary border-secondary/50 dark:border-secondary/20 tracking-wide uppercase animate-system-flicker">
+        <span class="material-symbols-outlined text-sm">check_circle</span>
+        <span>SYSTEM.STATUS: ONLINE [v3.0]</span>
+        <span class="px-2 py-0.5 bg-secondary/20 rounded text-secondary-fixed">RTK SUPPORT</span>
+    </div>
+    <h1 class="font-headline-lg-mobile md:font-headline-lg text-4xl md:text-[56px] leading-[1.1] font-bold text-on-surface tracking-tight">
+        FieldCam GIS. <br/>
+        <span class="text-gradient font-mono tracking-normal text-3xl md:text-[48px]">&lt;Field Mapping/&gt;</span><br/>
+        Anywhere.
+    </h1>
+    <p class="font-body-lg text-lg text-on-surface-variant/80 max-w-xl font-mono text-sm leading-relaxed border-l-2 border-outline-variant/30 pl-4 mt-2">
+        &gt; MapCraft puts professional mapping, GPS, surveying, field data collection, and GIS tools directly in your hands — even when you're working completely offline.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 pt-6">
+        <a href="https://play.google.com/store/apps/details?id=com.mapcraft.app" target="_blank" class="bg-secondary text-on-secondary px-8 py-3.5 rounded font-mono text-sm font-bold flex items-center justify-center gap-3 hover:bg-secondary-fixed hover:scale-105 transition-all shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:shadow-[0_0_30px_rgba(78,222,163,0.5)] group">
+            <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" style="font-variation-settings: 'FILL' 1;">shop</span>
+            Available on Play Store
+        </a>
+        <button class="glass-panel text-on-surface px-8 py-3.5 rounded font-mono text-sm hover:bg-surface-container/50 hover:border-secondary/50 hover:text-secondary transition-all flex items-center justify-center gap-3 group" onclick="loadTab('manual')">
+            Read Manual
+            <span class="material-symbols-outlined text-secondary/70 group-hover:text-secondary transition-colors">menu_book</span>
+        </button>
+    </div>
 </div>
-<h1 class="font-headline-lg-mobile md:font-headline-lg text-4xl md:text-[56px] leading-[1.1] font-bold text-on-surface tracking-tight scroll-animate scroll-stagger-1 is-visible">
-                        Professional GIS. <br/>
-<span class="text-gradient font-mono tracking-normal text-3xl md:text-[48px]">&lt;Field Mapping/&gt;</span><br/>
-                        Anywhere.
-                    </h1>
-<p class="font-body-lg text-lg text-on-surface-variant/80 max-w-xl font-mono text-sm leading-relaxed border-l-2 border-outline-variant/30 pl-4 mt-2 scroll-animate scroll-stagger-2 is-visible">
-                        &gt; MapCraft puts professional mapping, GPS, surveying, field data collection, and GIS tools directly in your hands — even when you're working completely offline.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4 pt-6 scroll-animate scroll-stagger-3 is-visible">
-<button class="bg-secondary text-on-secondary px-8 py-3.5 rounded font-mono text-sm font-bold flex items-center justify-center gap-3 hover:bg-secondary-fixed hover:scale-105 transition-all shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:shadow-[0_0_30px_rgba(78,222,163,0.5)] group">
-<span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" style="font-variation-settings: 'FILL' 1;">download</span>
-                            Execute: Get_MapCraft
-                        </button>
-<button class="glass-panel text-on-surface px-8 py-3.5 rounded font-mono text-sm hover:bg-surface-container/50 hover:border-secondary/50 hover:text-secondary transition-all flex items-center justify-center gap-3 group" onclick="loadTab('manual')">
-                            Read Manual
-                            <span class="material-symbols-outlined text-secondary/70 group-hover:text-secondary transition-colors">menu_book</span>
-</button>
-</div>
-</div>
-<div class="md:col-span-5 relative mt-16 md:mt-0 scroll-animate scroll-stagger-2 is-visible">
-<div class="relative w-full max-w-[360px] mx-auto z-10 glass-panel p-3 rounded-2xl ui-noise transition-transform duration-500 hover:scale-[1.02]">
-<div class="absolute inset-0 bg-secondary/10 blur-[100px] rounded-full z-[-1]"></div>
-<img class="w-full h-auto rounded-xl relative z-20 border border-white/10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9-QqqkkeB_xqTSguKWRNaXGLRE_P1VnJPSTK0lF7s45azebo38varpCzJ-sUs7EPL0aMZyD9VkcAu5Q0jdEfCvhPkJvKk_Fz_KEgy1cbWiE6uSu4IlL3OVrfK5YnxTpgaez1QCu3Lr9PPjpe6lVxzCnK2rm68ZmYclM9OSkv3QKm6WRuIEjGho7j_xE_GWT5kTK2UKq5Tsdm0lE0ZvWIQw8bi_eOhNV_LhFy9tngIVdxRti9b6ztFQ"/>
-<!-- Floating Badges -->
-<div class="absolute -top-5 -left-6 glass-panel px-3 py-2 rounded-lg font-mono text-[11px] flex items-center gap-2 z-30 shadow-xl text-secondary border border-secondary/30 animate-system-flicker">
-<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-<span class="material-symbols-outlined text-[14px]">satellite_alt</span>
-<span>GNSS_ACTIVE</span>
-</div>
-<div class="absolute bottom-16 -right-8 glass-panel px-3 py-2 rounded-lg font-mono text-[11px] flex items-center gap-2 z-30 shadow-xl text-error border border-error/30 transition-transform hover:scale-105">
-<span class="material-symbols-outlined text-[14px]">wifi_off</span>
-<span>OFFLINE_MODE</span>
-</div>
-</div>
+<div class="md:col-span-5 relative mt-16 md:mt-0">
+    <div class="relative w-full max-w-[360px] mx-auto z-10 glass-panel p-3 rounded-2xl ui-noise transition-transform duration-500 hover:scale-[1.02]">
+        <div class="absolute inset-0 bg-secondary/20 dark:bg-secondary/10 blur-[100px] rounded-full z-[-1]"></div>
+        <img class="w-full h-auto rounded-xl relative z-20 border border-black/10 dark:border-white/10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9-QqqkkeB_xqTSguKWRNaXGLRE_P1VnJPSTK0lF7s45azebo38varpCzJ-sUs7EPL0aMZyD9VkcAu5Q0jdEfCvhPkJvKk_Fz_KEgy1cbWiE6uSu4IlL3OVrfK5YnxTpgaez1QCu3Lr9PPjpe6lVxzCnK2rm68ZmYclM9OSkv3QKm6WRuIEjGho7j_xE_GWT5kTK2UKq5Tsdm0lE0ZvWIQw8bi_eOhNV_LhFy9tngIVdxRti9b6ztFQ"/>
+        <div class="absolute -top-5 -left-6 glass-panel px-3 py-2 rounded-lg font-mono text-[11px] flex items-center gap-2 z-30 shadow-xl text-secondary border border-secondary/60 dark:border-secondary/30 animate-system-flicker">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="material-symbols-outlined text-[14px]">satellite_alt</span>
+            <span>GNSS_ACTIVE</span>
+        </div>
+        <div class="absolute bottom-16 -right-8 glass-panel px-3 py-2 rounded-lg font-mono text-[11px] flex items-center gap-2 z-30 shadow-xl text-error border border-error/30 transition-transform hover:scale-105">
+            <span class="material-symbols-outlined text-[14px]">wifi_off</span>
+            <span>OFFLINE_MODE</span>
+        </div>
+    </div>
 </div>
 </div>
 </section>
 
-<!-- Documentation Layout Section -->
-<section class="max-w-7xl mx-auto px-margin pt-16 border-t border-white/5 relative">
-    
-    <!-- Loading overlay for transitions -->
-    <div id="loading" class="hidden absolute inset-0 flex flex-col items-start justify-start pt-32 bg-[#051424]/90 rounded-2xl z-30 backdrop-blur-sm w-full h-full">
-        <div class="w-full text-center">
-            <div class="loader"></div>
-            <p class="text-secondary font-mono text-sm tracking-widest uppercase">Connecting Database...</p>
+<!-- ============================================================ -->
+<!-- PAGE: FEATURES (Hardcoded Rich Layout) -->
+<!-- ============================================================ -->
+<section id="page-features" class="page-section active max-w-7xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+<div class="grid md:grid-cols-12 gap-12">
+    <aside class="md:col-span-3 pr-6 mb-8 md:mb-0">
+        <div class="relative md:sticky top-32 font-mono text-sm doc-sidebar max-h-[50vh] md:max-h-[calc(100vh-160px)] overflow-y-auto pr-2 mb-8 md:mb-0">
+            <h3 class="text-on-surface-variant font-bold mb-6 uppercase tracking-widest text-[10px] pl-6">Table of Contents</h3>
+            <ul class="space-y-4 text-on-surface-variant/70 text-[13px] pb-8">
+                <li class="doc-sidebar-link active" onclick="scrollToId('sec-features')">1.0 Features Overview</li>
+                <li class="doc-sidebar-link" onclick="scrollToId('sec-specs')">2.0 Technical Specs</li>
+                <li class="doc-sidebar-link" onclick="scrollToId('sec-formats')">3.0 Data Formats</li>
+                <li class="doc-sidebar-link" onclick="scrollToId('sec-map')">4.0 Interactive Map</li>
+            </ul>
         </div>
-    </div>
-
-    <div class="grid md:grid-cols-12 gap-12">
-        <!-- Sidebar -->
-        <aside class="md:col-span-3 hidden md:block pr-6">
-            <div class="sticky top-32 font-mono text-sm doc-sidebar">
-                <h3 id="sidebar-title" class="text-on-surface-variant font-bold mb-6 uppercase tracking-widest text-[10px] pl-6">Table of Contents</h3>
-                <ul id="sidebar-list" class="space-y-4 text-on-surface-variant/70 text-[13px]">
-                    <!-- Dynamic ToC populated here -->
-                </ul>
+    </aside>
+    <div class="md:col-span-9 space-y-24">
+        <!-- 1.0 Features Overview -->
+        <div id="sec-features" class="scroll-animate">
+            <h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-10 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+                <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded">1.0</span> Core Functionality
+            </h2>
+            <p class="text-on-surface-variant/80 font-light mb-8">Tap any card to reveal its full description.</p>
+            <div id="dynamic-features" class="grid sm:grid-cols-2 gap-6">
+                <div class="col-span-2 text-center py-12">
+                    <div class="loader"></div>
+                    <p class="text-secondary font-mono text-sm">Loading Features...</p>
+                </div>
             </div>
-        </aside>
+        </div>
 
-        <!-- Main Documentation Content -->
-        <div class="md:col-span-9 space-y-24" id="content-display">
-            <!-- Markdown content will be dynamically injected here, completely preserving the outer layout grid -->
+        <!-- 2.0 Technical Specifications -->
+        <div id="sec-specs" class="scroll-animate">
+            <h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+                <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded">2.0</span> Technical Specifications
+            </h2>
+            <div class="glass-panel rounded-xl overflow-hidden ui-noise overflow-x-auto w-full">
+                <table class="w-full text-left font-mono text-sm min-w-[500px]">
+                    <thead class="bg-black/5 dark:bg-black/20 border-b border-black/10 dark:border-white/10"><tr><th class="px-6 py-4 text-on-surface-variant/80 font-medium tracking-wide uppercase text-xs">Parameter</th><th class="px-6 py-4 text-on-surface-variant/80 font-medium tracking-wide uppercase text-xs">Specification</th></tr></thead>
+                    <tbody class="divide-y divide-white/5 text-on-surface/90 font-light">
+                        <tr class="hover:bg-secondary/5 transition-colors"><td class="px-6 py-5 text-secondary font-medium"><span class="material-symbols-outlined text-[16px] mr-2 align-middle">gps_fixed</span>Positioning</td><td class="px-6 py-5 whitespace-normal">Internal GPS, External Bluetooth GNSS (NMEA 0183)</td></tr>
+                        <tr class="hover:bg-secondary/5 transition-colors"><td class="px-6 py-5 text-secondary font-medium"><span class="material-symbols-outlined text-[16px] mr-2 align-middle">public</span>Coordinate Systems</td><td class="px-6 py-5">EPSG support via PROJ library (WGS84, Web Mercator, Local grids)</td></tr>
+                        <tr class="hover:bg-secondary/5 transition-colors"><td class="px-6 py-5 text-secondary font-medium"><span class="material-symbols-outlined text-[16px] mr-2 align-middle">memory</span>Rendering Engine</td><td class="px-6 py-5">Hardware-accelerated OpenGL/Metal</td></tr>
+                        <tr class="hover:bg-secondary/5 transition-colors"><td class="px-6 py-5 text-secondary font-medium"><span class="material-symbols-outlined text-[16px] mr-2 align-middle">hub</span>Max Vertices</td><td class="px-6 py-5">&gt; 1,000,000 per layer (device dependent)</td></tr>
+                        <tr class="hover:bg-secondary/5 transition-colors"><td class="px-6 py-5 text-secondary font-medium"><span class="material-symbols-outlined text-[16px] mr-2 align-middle">storage</span>Database</td><td class="px-6 py-5">SQLite / GeoPackage with automated backup</td></tr>
+                        <tr class="hover:bg-secondary/5 transition-colors"><td class="px-6 py-5 text-secondary font-medium"><span class="material-symbols-outlined text-[16px] mr-2 align-middle">sync</span>Sync Protocol</td><td class="px-6 py-5">FTP / FTPS / REST / PostGIS bi-directional</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3.0 Data Format Support -->
+        <div id="sec-formats" class="scroll-animate">
+            <h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+                <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded">3.0</span> Data Format Support
+            </h2>
+            <div class="tech-border rounded-xl p-8 font-mono text-sm text-on-surface-variant">
+                <div class="flex items-center gap-2 mb-4 text-on-surface-variant/60 text-xs">
+                    <span class="w-3 h-3 rounded-full bg-error/50"></span><span class="w-3 h-3 rounded-full bg-yellow-500/50"></span><span class="w-3 h-3 rounded-full bg-secondary/50"></span>
+                    <span class="ml-2 animate-system-flicker">// Import &amp; Export Matrix</span>
+                </div>
+<pre class="bg-black/5 dark:bg-black/30 p-6 rounded-lg overflow-x-auto border border-black/10 dark:border-white/5 shadow-inner leading-relaxed"><code class="text-sm"><span class="token-keyword">const</span> formats <span class="token-punctuation">=</span> <span class="token-punctuation">{</span>
+  vector<span class="token-punctuation">:</span> <span class="token-punctuation">[</span><span class="token-string">"GeoJSON"</span><span class="token-punctuation">,</span> <span class="token-string">"KML/KMZ"</span><span class="token-punctuation">,</span> <span class="token-string">"GPX"</span><span class="token-punctuation">,</span> <span class="token-string">"Shapefile (SHP)"</span><span class="token-punctuation">,</span> <span class="token-string">"DXF"</span><span class="token-punctuation">]</span><span class="token-punctuation">,</span>
+  raster<span class="token-punctuation">:</span> <span class="token-punctuation">[</span><span class="token-string">"GeoTIFF"</span><span class="token-punctuation">,</span> <span class="token-string">"MBTiles"</span><span class="token-punctuation">]</span><span class="token-punctuation">,</span>
+  database<span class="token-punctuation">:</span> <span class="token-punctuation">[</span><span class="token-string">"GeoPackage (GPKG)"</span><span class="token-punctuation">,</span> <span class="token-string">"SpatiaLite"</span><span class="token-punctuation">]</span><span class="token-punctuation">,</span>
+  tabular<span class="token-punctuation">:</span> <span class="token-punctuation">[</span><span class="token-string">"CSV"</span><span class="token-punctuation">,</span> <span class="token-string">"Excel (XLSX)"</span><span class="token-punctuation">]</span>
+<span class="token-punctuation">}</span><span class="token-punctuation">;</span>
+
+<span class="token-comment">// All formats support bi-directional sync when online</span></code></pre>
+            </div>
+        </div>
+
+        <!-- 4.0 Interactive Map Demo -->
+        <div id="sec-map" class="scroll-animate">
+            <h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+                <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded">4.0</span> Interactive Map Demo
+            </h2>
+            <div class="tech-border rounded-xl overflow-hidden relative h-[600px] bg-black/5 dark:bg-black/40 font-mono text-sm group">
+                <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-40 mix-blend-luminosity group-hover:opacity-50 transition-opacity duration-700"></div>
+                <div class="absolute inset-0 z-0"><svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg"><polygon fill="rgba(78,222,163,0.2)" points="100,100 250,120 200,300 80,250" stroke="#4edea3" stroke-width="2" class="transition-all duration-300 hover:fill-secondary/30 cursor-pointer"></polygon><polygon fill="rgba(185,199,228,0.2)" points="300,150 450,100 500,250 350,300" stroke="#b9c7e4" stroke-dasharray="5,5" stroke-width="2" class="transition-all duration-300 hover:fill-primary/30 cursor-pointer"></polygon><path d="M 50,400 Q 150,300 250,450 T 450,350" fill="none" stroke="#6ffbbe" stroke-width="3" opacity="0.8"></path><circle cx="250" cy="450" r="6" fill="#051424" stroke="#4edea3" stroke-width="2" class="animate-pulse-slow"></circle></svg></div>
+                <!-- Toolbar -->
+                <div class="absolute top-4 left-4 z-10 glass-panel rounded-lg p-2 flex flex-col gap-2">
+                    <button class="p-2 hover:bg-secondary/20 rounded text-on-surface-variant hover:text-secondary transition-colors" title="Add Point"><span class="material-symbols-outlined text-[20px]">location_on</span></button>
+                    <button class="p-2 hover:bg-secondary/20 rounded text-on-surface-variant hover:text-secondary transition-colors" title="Draw Line"><span class="material-symbols-outlined text-[20px]">show_chart</span></button>
+                    <button class="p-2 hover:bg-secondary/20 rounded text-on-surface-variant hover:text-secondary transition-colors" title="Draw Polygon"><span class="material-symbols-outlined text-[20px]">category</span></button>
+                    <div class="w-full h-px bg-white/10 my-1"></div>
+                    <button class="p-2 hover:bg-secondary/20 rounded text-on-surface-variant hover:text-secondary transition-colors" title="Measure"><span class="material-symbols-outlined text-[20px]">straighten</span></button>
+                </div>
+                <!-- Layer Panel -->
+                <div class="hidden sm:block absolute top-4 right-4 z-10 glass-panel rounded-lg p-4 w-64 border border-secondary/50 dark:border-secondary/20">
+                    <h4 class="text-xs font-bold text-secondary uppercase tracking-widest mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">layers</span> Layer Management</h4>
+                    <div class="space-y-3">
+                        <label class="flex items-center justify-between cursor-pointer group"><span class="text-on-surface-variant group-hover:text-on-surface text-[13px]">Satellite Imagery</span><div class="w-8 h-4 bg-secondary/30 rounded-full relative"><div class="absolute right-1 top-0.5 w-3 h-3 bg-secondary rounded-full"></div></div></label>
+                        <label class="flex items-center justify-between cursor-pointer group"><span class="text-on-surface-variant group-hover:text-on-surface text-[13px]">Topographic (Offline)</span><div class="w-8 h-4 bg-surface-container-highest rounded-full relative"><div class="absolute left-1 top-0.5 w-3 h-3 bg-outline-variant rounded-full"></div></div></label>
+                        <div class="w-full h-px bg-black/5 dark:bg-white/5 my-2"></div>
+                        <label class="flex items-center justify-between cursor-pointer group"><span class="text-on-surface-variant text-[13px] flex items-center gap-2"><span class="w-2 h-2 rounded bg-secondary"></span> Land Parcels</span><div class="w-8 h-4 bg-secondary/30 rounded-full relative"><div class="absolute right-1 top-0.5 w-3 h-3 bg-secondary rounded-full"></div></div></label>
+                        <label class="flex items-center justify-between cursor-pointer group"><span class="text-on-surface-variant text-[13px] flex items-center gap-2"><span class="w-2 h-2 rounded bg-primary"></span> Survey Tracks</span><div class="w-8 h-4 bg-secondary/30 rounded-full relative"><div class="absolute right-1 top-0.5 w-3 h-3 bg-secondary rounded-full"></div></div></label>
+                    </div>
+                </div>
+                <!-- Live GPS Panel -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 glass-panel rounded-lg px-4 sm:px-6 py-3 border border-secondary/60 dark:border-secondary/30 flex flex-col sm:flex-row items-center gap-2 sm:gap-6 w-[90%] sm:w-auto overflow-x-auto no-scrollbar">
+                    <div class="flex items-center gap-2 whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse-slow"></span><span class="text-[11px] text-secondary tracking-widest uppercase animate-system-flicker">Live GPS</span></div>
+                    <div class="flex gap-4 sm:gap-6 text-[13px] text-on-surface whitespace-nowrap">
+                        <div class="flex flex-col"><span class="text-on-surface-variant/60 text-[10px] uppercase">Lat / Long</span><span class="font-bold">45.5231° N, 122.6765° W</span></div>
+                        <div class="flex flex-col"><span class="text-on-surface-variant/60 text-[10px] uppercase">Altitude</span><span class="font-bold text-primary">152.4m</span></div>
+                        <div class="flex flex-col"><span class="text-on-surface-variant/60 text-[10px] uppercase">Accuracy</span><span class="font-bold text-secondary">± 0.05m <span class="text-[10px] bg-secondary/20 px-1 rounded ml-1">RTK</span></span></div>
+                    </div>
+                </div>
+                <!-- Crosshair -->
+                <div class="absolute inset-0 pointer-events-none z-0 flex items-center justify-center"><div class="w-12 h-12 border border-secondary/40 rounded-full flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity duration-300"><div class="w-1 h-1 bg-secondary rounded-full animate-pulse"></div><div class="absolute w-full h-px bg-secondary/20"></div><div class="absolute h-full w-px bg-secondary/20"></div></div></div>
+                <div class="absolute bottom-4 right-4 z-10 text-[10px] text-on-surface-variant/60 flex flex-col items-end gap-1"><div class="flex items-end gap-2 border-b-2 border-l-2 border-on-surface-variant/40 pb-1 pl-1 w-24"><span>0</span><span class="ml-auto">50m</span></div><span>EPSG:3857</span></div>
+            </div>
         </div>
     </div>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE: FAQ (Hardcoded Accordion) -->
+<!-- ============================================================ -->
+<section id="page-faq" class="page-section max-w-7xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+<div class="md:col-span-12 space-y-16">
+    <h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+        <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded"><span class="material-symbols-outlined">quiz</span></span> FAQ &amp; Troubleshooting
+    </h2>
+    <div class="space-y-4" id="faq-container">
+        <!-- FAQ items will be loaded from MASTER_FAQ.md and rendered as accordions -->
+        <div class="text-center py-12"><div class="loader"></div><p class="text-secondary font-mono text-sm">Loading FAQ database...</p></div>
+    </div>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE: MANUAL (Markdown Loaded) -->
+<!-- ============================================================ -->
+<section id="page-manual" class="page-section max-w-7xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+<div class="grid md:grid-cols-12 gap-12">
+    <aside class="md:col-span-3 pr-6 mb-8 md:mb-0"><div class="relative md:sticky top-32 font-mono text-sm doc-sidebar max-h-[50vh] md:max-h-[calc(100vh-160px)] overflow-y-auto pr-2 mb-8 md:mb-0"><h3 class="text-on-surface-variant font-bold mb-6 uppercase tracking-widest text-[10px] pl-6">Manual Contents</h3><ul id="manual-toc" class="space-y-4 text-on-surface-variant/70 text-[13px] pb-8"></ul></div></aside>
+    <div class="md:col-span-9" id="manual-content"><div class="text-center py-12"><div class="loader"></div><p class="text-secondary font-mono text-sm">Loading Manual...</p></div></div>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE: TUTORIALS (Markdown Loaded) -->
+<!-- ============================================================ -->
+<section id="page-tutorials" class="page-section max-w-7xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+<div class="grid md:grid-cols-12 gap-12">
+    <aside class="md:col-span-3 pr-6 mb-8 md:mb-0"><div class="relative md:sticky top-32 font-mono text-sm doc-sidebar max-h-[50vh] md:max-h-[calc(100vh-160px)] overflow-y-auto pr-2 mb-8 md:mb-0"><h3 class="text-on-surface-variant font-bold mb-6 uppercase tracking-widest text-[10px] pl-6">Tutorials</h3><ul id="tutorials-toc" class="space-y-4 text-on-surface-variant/70 text-[13px] pb-8"></ul></div></aside>
+    <div class="md:col-span-9" id="tutorials-content"><div class="text-center py-12"><div class="loader"></div><p class="text-secondary font-mono text-sm">Loading Tutorials...</p></div></div>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE: CONTACT -->
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
+<!-- PAGE: CHANGELOG -->
+<!-- ============================================================ -->
+<section id="page-changelog" class="page-section max-w-4xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+    <div class="flex items-center gap-4 mb-12">
+        <div class="p-3 bg-secondary/20 dark:bg-secondary/10 rounded-xl border border-secondary/50 dark:border-secondary/20">
+            <span class="material-symbols-outlined text-secondary text-3xl">update</span>
+        </div>
+        <div>
+            <h2 class="font-headline-lg text-4xl font-bold text-on-surface">Changelog</h2>
+            <p class="text-on-surface-variant/70 font-mono mt-1">System Version History</p>
+        </div>
+    </div>
+    <div id="dynamic-changelog" class="flex flex-col gap-8 pb-32"></div>
+</section>
+
+<section id="page-contact" class="page-section max-w-7xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+<h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+    <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded"><span class="material-symbols-outlined">support_agent</span></span> System Support
+</h2>
+<div class="grid md:grid-cols-2 gap-8">
+    <div class="tech-border rounded-xl p-8">
+        <h3 class="font-bold text-on-surface font-mono mb-6 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">terminal</span> Initialize_Connection()</h3>
+        <form class="space-y-4 font-mono text-sm">
+            <div><label class="block text-on-surface-variant/70 text-xs mb-2 uppercase"><span class="material-symbols-outlined text-[14px] mr-1 align-middle">email</span>Protocol_ID (Email)</label><input class="w-full bg-black/5 dark:bg-black/30 border border-black/10 dark:border-white/10 rounded p-3 text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 transition-all outline-none" placeholder="user@domain.com" type="email"/></div>
+            <div><label class="block text-on-surface-variant/70 text-xs mb-2 uppercase"><span class="material-symbols-outlined text-[14px] mr-1 align-middle">subject</span>Subject</label><input class="w-full bg-black/5 dark:bg-black/30 border border-black/10 dark:border-white/10 rounded p-3 text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 transition-all outline-none" placeholder="Bug report / Feature request" type="text"/></div>
+            <div><label class="block text-on-surface-variant/70 text-xs mb-2 uppercase"><span class="material-symbols-outlined text-[14px] mr-1 align-middle">description</span>Payload (Message)</label><textarea class="w-full bg-black/5 dark:bg-black/30 border border-black/10 dark:border-white/10 rounded p-3 text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/50 transition-all outline-none h-32 resize-none" placeholder="Describe system anomaly..."></textarea></div>
+            <button class="w-full bg-secondary/20 dark:bg-secondary/10 text-secondary border border-secondary/60 dark:border-secondary/30 px-6 py-3 rounded hover:bg-secondary/20 hover:shadow-[0_0_15px_rgba(78,222,163,0.2)] transition-all flex items-center justify-center gap-2" type="button"><span class="material-symbols-outlined text-[18px]">send</span> Transmit_Data</button>
+        </form>
+    </div>
+    <div class="space-y-4">
+        <div class="glass-panel p-6 rounded-xl flex items-center gap-4 hover:border-secondary/60 dark:border-secondary/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-secondary text-3xl">mark_email_unread</span><div><div class="text-xs text-on-surface-variant/70 uppercase font-mono">Direct Comms</div><div class="font-bold text-on-surface">support@mapcraft.io</div></div></div>
+        <div class="glass-panel p-6 rounded-xl flex items-center gap-4 hover:border-secondary/60 dark:border-secondary/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-secondary text-3xl">forum</span><div><div class="text-xs text-on-surface-variant/70 uppercase font-mono">Community Server</div><div class="font-bold text-on-surface">discord.gg/mapcraft</div></div></div>
+        <div class="glass-panel p-6 rounded-xl flex items-center gap-4 hover:border-secondary/60 dark:border-secondary/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-secondary text-3xl">description</span><div><div class="text-xs text-on-surface-variant/70 uppercase font-mono">Knowledge Base</div><div class="font-bold text-on-surface">docs.mapcraftapp.github.io</div></div></div>
+        <div class="glass-panel p-6 rounded-xl flex items-center gap-4 hover:border-secondary/60 dark:border-secondary/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-secondary text-3xl">bug_report</span><div><div class="text-xs text-on-surface-variant/70 uppercase font-mono">Report a Bug</div><div class="font-bold text-on-surface">github.com/mapcraft/issues</div></div></div>
+    </div>
+</div>
+<!-- Support & Terms Sub-Sections -->
+<div class="grid md:grid-cols-2 gap-8 mt-16">
+    <div class="tech-border rounded-xl p-8">
+        <h3 class="font-bold text-on-surface font-mono mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">verified_user</span> Support Policy</h3>
+        <ul class="space-y-3 text-on-surface-variant/80 text-sm font-light">
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span> Free community support via Discord &amp; GitHub Issues</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span> Priority email support for enterprise license holders</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span> Response time: 24-48 hours (business days)</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span> Critical bug patches released within 72 hours</li>
+        </ul>
+    </div>
+    <div class="tech-border rounded-xl p-8">
+        <h3 class="font-bold text-on-surface font-mono mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">gavel</span> Terms &amp; Privacy</h3>
+        <ul class="space-y-3 text-on-surface-variant/80 text-sm font-light">
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">lock</span> All data is stored locally on-device. No cloud telemetry.</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">shield</span> GPS data never leaves your device without explicit export.</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">policy</span> FTP sync is opt-in and configured by you.</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">info</span> See full <a href="#" class="text-secondary border-b border-secondary/60 dark:border-secondary/30 hover:border-secondary">Privacy Policy</a> and <a href="#" class="text-secondary border-b border-secondary/60 dark:border-secondary/30 hover:border-secondary">Terms of Service</a>.</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE: SEARCH RESULTS -->
+<!-- ============================================================ -->
+<section id="page-search" class="page-section max-w-7xl mx-auto px-margin pt-16 border-t border-black/10 dark:border-white/5">
+    <h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+        <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded"><span class="material-symbols-outlined">search</span></span> Search Results
+    </h2>
+    <div id="search-results-container"></div>
 </section>
 
 </main>
+
 <!-- Footer -->
-<footer class="w-full bg-[#020810] border-t border-white/5 transition-opacity duration-200 mt-12 font-mono relative z-10 scroll-animate">
-<div class="grid grid-cols-2 md:grid-cols-6 gap-gutter px-margin py-12 max-w-7xl mx-auto">
-<div class="col-span-2 md:col-span-2 flex flex-col gap-4">
-<div class="flex items-center gap-2 group cursor-pointer w-max">
-<span class="material-symbols-outlined text-secondary group-hover:animate-pulse" style="font-variation-settings: 'FILL' 1;">terminal</span>
-<span class="font-bold text-on-surface tracking-tight group-hover:text-secondary transition-colors">MapCraft_System</span>
-</div>
-<p class="text-[13px] text-on-surface-variant/70 max-w-xs mt-2 leading-relaxed">
-                    &gt; Professional GIS tools engineered for precision fieldwork and geospatial analysis.
-                </p>
-<p class="text-[11px] text-on-surface-variant/40 mt-6 hover:text-on-surface-variant/70 transition-colors">
-                    [EOF] © 2024 MapCraft GIS Solutions.
-                </p>
-</div>
-<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
-<h4 class="text-on-surface mb-2 text-sm font-semibold tracking-wide">// Product</h4>
-<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/features</a>
-<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/solutions</a>
-</div>
-<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
-<h4 class="text-on-surface mb-2 text-sm font-semibold tracking-wide">// Company</h4>
-<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/resources</a>
-<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/support</a>
-</div>
-<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
-<h4 class="text-on-surface mb-2 text-sm font-semibold tracking-wide">// Legal</h4>
-<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/privacy</a>
-<a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/terms</a>
-</div>
+<footer class="w-full bg-black/5 dark:bg-[#020810] border-t border-black/10 dark:border-white/5 mt-12 font-mono relative z-10 transition-colors">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8 px-margin py-12 max-w-7xl mx-auto">
+    <div class="col-span-2 md:col-span-2 flex flex-col gap-4">
+        <div class="flex items-center gap-2 cursor-pointer w-max" onclick="loadTab('features')">
+            <img src="./logo.png" alt="MapCraft Logo" class="h-8 w-auto">
+            <span class="font-bold text-on-surface tracking-tight hover:text-secondary transition-colors pl-1">MapCraft_System</span>
+        </div>
+        <p class="text-[13px] text-on-surface-variant/70 max-w-xs mt-2 leading-relaxed">&gt; Professional GIS tools for precision fieldwork.</p>
+        <p class="text-[11px] text-on-surface-variant/40 mt-6">[EOF] © 2026 MapCraft GIS Solutions.</p>
+    </div>
+    <div class="col-span-1 flex flex-col gap-4"><h4 class="text-on-surface mb-2 text-sm font-semibold">// Product</h4><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#" onclick="loadTab('features')">/features</a><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#" onclick="loadTab('manual')">/manual</a></div>
+    <div class="col-span-1 flex flex-col gap-4"><h4 class="text-on-surface mb-2 text-sm font-semibold">// Resources</h4><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#" onclick="loadTab('faq')">/faq</a><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#" onclick="loadTab('tutorials')">/tutorials</a></div>
+    <div class="col-span-1 flex flex-col gap-4"><h4 class="text-on-surface mb-2 text-sm font-semibold">// Company</h4><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#" onclick="loadTab('contact')">/contact</a><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#" onclick="loadTab('changelog')">/changelog</a><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/support</a></div>
+    <div class="col-span-1 flex flex-col gap-4"><h4 class="text-on-surface mb-2 text-sm font-semibold">// Legal</h4><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/privacy</a><a class="text-[13px] text-on-surface-variant/70 hover:text-secondary hover:translate-x-1 transition-all" href="#">/terms</a></div>
 </div>
 </footer>
 
+
 <script>
-    // Intersection Observer setup
+    // Scroll animation observer
     function setupObserver() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, { threshold: 0.1 });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); }); }, { threshold: 0.1 });
         document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
     }
 
-    // Database Configuration
+    // Markdown files
     const markdownFiles = {
         'manual': { path: './file/MASTER_MANUAL_BOOK.md', cache: null },
         'features': { path: './file/HIGHLIGHT_FEATURES.md', cache: null },
         'faq': { path: './file/MASTER_FAQ.md', cache: null },
-        'tutorials': { path: './file/TUTORIALS.md', cache: null }
+        'tutorials': { path: './file/TUTORIALS.md', cache: null },
+        'changelog': { path: './file/CHANGELOG.md', cache: null }
     };
 
     let currentTab = '';
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
         setupObserver();
-        
-        // Check if there's a hash in the URL to load a specific tab
         const hash = window.location.hash.replace('#', '');
-        if (markdownFiles[hash]) {
-            loadTab(hash);
-        } else {
-            loadTab('features');
+        const validTabs = ['features','manual','faq','tutorials','contact','changelog'];
+        
+        await loadTab(validTabs.includes(hash) ? hash : 'features');
+        
+        // Hide loader after initial render
+        const loader = document.getElementById('tech-loader');
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.style.display = 'none', 700);
         }
 
-        // Global Search
-        const searchInput = document.getElementById('searchInput');
+        // Search
+        const searchInputs = document.querySelectorAll('.search-input-field');
         let debounceTimer;
-        searchInput.addEventListener('input', (e) => {
-            clearTimeout(debounceTimer);
-            debounceTimer = setTimeout(() => {
+        searchInputs.forEach(input => {
+            input.addEventListener('input', (e) => {
                 const query = e.target.value.trim();
-                if (query.length > 2) {
-                    performGlobalSearch(query);
-                } else if (query.length === 0) {
-                    loadTab(currentTab || 'features'); 
-                }
-            }, 400);
+                searchInputs.forEach(i => { if (i !== e.target) i.value = query; });
+                
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    if (query.length > 2) { performGlobalSearch(query); }
+                    else if (query.length === 0) { loadTab(currentTab || 'features'); }
+                }, 400);
+            });
         });
+
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-toggle');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
     });
+
+    
+    async function loadChangelog() {
+        const container = document.getElementById('dynamic-changelog');
+        if (!container) return;
+        try {
+            const md = await fetchMarkdown('changelog');
+            const lines = md.split('\n');
+            let html = '';
+            
+            let currentVersion = '';
+            let currentDate = '';
+            let isFirst = true;
+            let currentCategoryHtml = '';
+            
+            const badgeMap = {
+                'Added': 'bg-[#10b981]/20 text-[#10b981] border-[#10b981]/30',
+                'Changed': 'bg-[#f59e0b]/20 text-[#f59e0b] border-[#f59e0b]/30',
+                'Fixed': 'bg-[#3b82f6]/20 text-[#3b82f6] border-[#3b82f6]/30',
+                'Removed': 'bg-[#ef4444]/20 text-[#ef4444] border-[#ef4444]/30'
+            };
+
+            function flushVersion() {
+                if (currentVersion) {
+                    html += `<div class="tech-border p-6 rounded-2xl group relative ${isFirst ? 'border-secondary/50 dark:border-secondary/40 shadow-[0_0_30px_rgba(78,222,163,0.1)]' : ''}">`;
+                    if (isFirst) {
+                        html += `<div class="absolute -top-3 -right-3 bg-secondary text-on-secondary text-[10px] font-bold px-3 py-1 rounded-full font-mono animate-pulse">LATEST</div>`;
+                    }
+                    html += `
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 border-b border-black/10 dark:border-white/10 pb-4">
+                            <h3 class="text-2xl font-bold font-mono text-on-surface flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">commit</span>
+                                ${currentVersion}
+                            </h3>
+                            ${currentDate ? `<span class="text-on-surface-variant/60 font-mono text-sm bg-black/5 dark:bg-white/5 px-3 py-1 rounded border border-black/5 dark:border-white/5">${currentDate}</span>` : ''}
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            ${currentCategoryHtml}
+                        </div>
+                    </div>`;
+                    isFirst = false;
+                }
+                currentCategoryHtml = '';
+            }
+
+            lines.forEach(line => {
+                if (line.startsWith('## [')) {
+                    flushVersion();
+                    const match = line.match(/## \[(.*?)\](?: - (.*))?/);
+                    if (match) {
+                        currentVersion = match[1];
+                        currentDate = match[2] || '';
+                    }
+                } else if (line.startsWith('### ')) {
+                    const category = line.replace('### ', '').trim();
+                    const badgeClass = badgeMap[category] || 'bg-outline/20 text-on-surface border-outline/30';
+                    currentCategoryHtml += `<div><h4 class="inline-block px-2 py-0.5 rounded text-xs font-bold font-mono border ${badgeClass} mb-3">${category}</h4><ul class="space-y-2 text-on-surface-variant font-light text-[15px] pl-1">`;
+                } else if (line.startsWith('- ')) {
+                    const text = line.replace('- ', '').trim();
+                    currentCategoryHtml += `<li class="flex gap-3"><span class="text-secondary opacity-50 mt-1">-</span><span>${text}</span></li>`;
+                } else if (line.trim() === '' && currentCategoryHtml.endsWith('</ul>')) {
+                    // Just spacing
+                } else if (line.trim() === '' && currentCategoryHtml && !currentCategoryHtml.endsWith('</ul>')) {
+                    currentCategoryHtml += `</ul></div>`;
+                }
+            });
+            flushVersion();
+            
+            container.innerHTML = html || '<p class="text-on-surface-variant">No changelog data found.</p>';
+        } catch(e) {
+            container.innerHTML = `<div class="tech-border p-8 rounded-xl text-error"><p>Failed to load changelog. ${e.message}</p></div>`;
+        }
+    }
 
     async function loadTab(tabKey) {
         currentTab = tabKey;
-        
-        // Update URL Hash for easy sharing
-        if (window.history.pushState) {
-            window.history.pushState(null, null, '#' + tabKey);
-        } else {
-            window.location.hash = '#' + tabKey;
-        }
-        
-        // Update Nav UI
-        document.querySelectorAll('.nav-link').forEach(el => {
-            el.classList.remove('active', 'text-secondary', 'font-medium');
-            el.classList.add('text-on-surface-variant');
-        });
-        const activeTab = document.getElementById(`tab-${tabKey}`);
-        if(activeTab) {
-            activeTab.classList.add('active', 'text-secondary', 'font-medium');
-            activeTab.classList.remove('text-on-surface-variant');
-        }
+        if (window.history.pushState) window.history.pushState(null, null, '#' + tabKey);
 
-        const contentDiv = document.getElementById('content-display');
-        const sidebarList = document.getElementById('sidebar-list');
-        const loader = document.getElementById('loading');
-        
-        loader.classList.remove('hidden');
-        document.getElementById('sidebar-title').innerText = "Table of Contents";
+        // Update nav
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        document.querySelectorAll(`.nav-link[data-tab="${tabKey}"]`).forEach(link => link.classList.add('active'));
 
+        // Hide all page sections, show the active one
+        document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+        const pageEl = document.getElementById(`page-${tabKey}`);
+        if (pageEl) pageEl.classList.add('active');
+
+        // Load markdown content for dynamic tabs
+        if (tabKey === 'features') await loadFeatures();
+        if (tabKey === 'manual') await loadMarkdownInto('manual', 'manual-content', 'manual-toc');
+        if (tabKey === 'tutorials') await loadTutorials();
+        if (tabKey === 'faq') await loadFaqAccordion();
+        if (tabKey === 'changelog') await loadChangelog();
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setupObserver();
+    }
+
+    async function loadMarkdownInto(key, contentId, tocId) {
+        const contentDiv = document.getElementById(contentId);
+        const tocList = document.getElementById(tocId);
         try {
-            const markdownText = await fetchMarkdown(tabKey);
+            let md = await fetchMarkdown(key);
             
-            // Custom renderer to add IDs to headers for TOC linking
+            // For the manual: strip the inline TABLE OF CONTENTS section
+            // (because the sidebar already provides chapter navigation)
+            if (key === 'manual') {
+                // Remove everything between "## TABLE OF CONTENTS" and the next "---" or "# CHAPTER"
+                md = md.replace(/## TABLE OF CONTENTS[\s\S]*?(?=\n---\s*\n# |\n# CHAPTER)/i, '');
+            }
+
             const renderer = new marked.Renderer();
             const toc = [];
             
-            renderer.heading = function (text, level) {
-                const slug = text.toLowerCase().replace(/[^\w]+/g, '-');
-                // Only collect h2 for Sidebar TOC
-                if (level === 2) {
-                    toc.push({ text: text, slug: slug });
-                    return `<h2 id="${slug}" class="scroll-animate"><span class="text-secondary font-mono text-xl bg-secondary/10 p-2 rounded mr-4">#</span> ${text}</h2>`;
+            renderer.heading = function (tokenOrText, levelOrUndef) {
+                let text, level;
+                if (typeof tokenOrText === 'object' && tokenOrText !== null) { text = tokenOrText.text; level = tokenOrText.depth; }
+                else { text = tokenOrText; level = levelOrUndef; }
+                const slug = String(text).toLowerCase().replace(/[^\w]+/g, '-');
+                
+                if (key === 'manual') {
+                    if (level === 1) {
+                        const chapterMatch = String(text).match(/CHAPTER\s+(\d+)/i);
+                        const shortLabel = chapterMatch 
+                            ? `Ch.${chapterMatch[1]}: ${String(text).replace(/CHAPTER\s+\d+:\s*/i, '').trim()}`
+                            : String(text);
+                        toc.push({ text: shortLabel, slug: slug, level: 1 });
+                        return `<h1 id="${slug}" class="scroll-animate">${text}</h1>`;
+                    } else if (level === 2) {
+                        toc.push({ text: String(text), slug: slug, level: 2 });
+                        return `<h2 id="${slug}" class="scroll-animate">${text}</h2>`;
+                    }
+                } else if (key !== 'manual' && level === 2) {
+                    toc.push({ text, slug, level: 2 });
+                    return `<h2 id="${slug}" class="scroll-animate"><span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded mr-4">#</span> ${text}</h2>`;
                 }
+                
                 return `<h${level} id="${slug}">${text}</h${level}>`;
             };
 
-            const htmlContent = marked.parse(markdownText, { renderer: renderer });
+                        const originalCodeRenderer = renderer.code.bind(renderer);
+            renderer.code = function(tokenOrCode, lang, isEscaped) {
+                let codeText = typeof tokenOrCode === 'object' && tokenOrCode !== null ? tokenOrCode.text : tokenOrCode;
+                
+                
+                
+                
+                // 1. Mobile UI Mockup Parser (Interactive Demo)
+                if (typeof codeText === 'string' && codeText.includes('MAP VIEW AREA')) {
+                    return `
+                    <div class="flex flex-col items-center w-full my-12">
+                        <!-- Instructions -->
+                        <div class="bg-secondary/10 dark:bg-secondary/5 text-secondary border border-secondary/20 rounded-lg px-4 py-2 mb-6 text-sm font-mono flex items-center gap-2 animate-pulse">
+                            <span class="material-symbols-outlined text-[18px]">ads_click</span>
+                            Hover/Tap elements, or click the Menu (≡) to open the Drawer!
+                        </div>
+                        
+                        <!-- Mobile Device Mockup -->
+                        <div class="relative w-[340px] h-[720px] bg-black rounded-[40px] border-[12px] border-black shadow-2xl overflow-hidden font-sans mx-auto flex flex-col group/demo">
+                            
+                            <!-- ================= MAP SCREEN (Background) ================= -->
+                            
+                            <!-- Map Background -->
+                            <div class="absolute inset-0 bg-[url('https://api.maptiler.com/maps/satellite/256/0/0/0.jpg')] bg-cover bg-center">
+                               <!-- Fake map lines -->
+                               <svg class="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 340 720">
+                                   <path d="M 0 300 Q 150 400 340 250" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+                                   <path d="M 50 720 L 150 350 L 340 320" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+                                   <path d="M 150 350 L 50 150" stroke="#22c55e" stroke-width="2" fill="none"/>
+                               </svg>
+                            </div>
+                            
+                            <!-- Top Status Bar (Fake OS) -->
+                            <div class="w-full bg-transparent h-6 flex justify-between items-center px-4 pt-1 z-20 text-white text-[10px] font-bold drop-shadow-md">
+                                <span>12:00</span>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[12px]">signal_cellular_4_bar</span>
+                                    <span class="material-symbols-outlined text-[12px]">battery_full</span>
+                                </div>
+                            </div>
+                            
+                            <!-- MapCraft Top Bar Stack -->
+                            <div class="relative z-20 px-2 mt-1 flex flex-col gap-1 w-full">
+                                <!-- Main Toolbar -->
+                                <div class="bg-white rounded-xl shadow-xl flex flex-col overflow-hidden text-gray-800 border border-gray-100">
+                                    <!-- Row 1: Tools -->
+                                    <div class="flex items-center justify-between px-3 py-2 border-b border-gray-100">
+                                        <div class="flex gap-4">
+                                            <span id="demo-menu-btn" class="material-symbols-outlined cursor-pointer text-gray-800 hover:text-blue-500 transition-colors demo-element font-bold text-[22px]" data-title="Drawer Menu" data-desc="Opens the main application drawer for managing projects, global settings, and user profiles." data-scroll-target="section-1-top-search-bar--telemetry-overlay">menu</span>
+                                            <span class="material-symbols-outlined cursor-pointer text-gray-800 hover:text-blue-500 transition-colors demo-element text-[22px]" data-title="Filter/Sort" data-desc="Sort and filter visible map features by attributes or type.">filter_list</span>
+                                            <span class="material-symbols-outlined cursor-pointer text-gray-800 hover:text-blue-500 transition-colors demo-element text-[22px]" data-title="Feature List" data-desc="View all features in the current viewport as a data table.">list</span>
+                                        </div>
+                                        <div class="flex gap-4">
+                                            <span class="material-symbols-outlined cursor-pointer text-gray-800 hover:text-blue-500 transition-colors demo-element font-bold text-[22px]" data-title="Global Search" data-desc="Quick navigation to a specific coordinate, address, or feature title." data-scroll-target="section-1-top-search-bar--telemetry-overlay">search</span>
+                                            <span class="material-symbols-outlined cursor-pointer text-gray-800 hover:text-blue-500 transition-colors demo-element text-[22px]" data-title="Share Map" data-desc="Export current view or project package to other team members.">share</span>
+                                            <span class="material-symbols-outlined cursor-pointer text-gray-800 hover:text-blue-500 transition-colors demo-element text-[22px]" data-title="More Options" data-desc="Access advanced tools and basemap settings.">more_vert</span>
+                                        </div>
+                                    </div>
+                                    <!-- Row 2: GPS Status -->
+                                    <div class="bg-gray-100 flex items-center justify-between px-2 py-1.5 text-[9px] font-bold text-gray-500 demo-element" data-title="Telemetry Strip" data-desc="Real-time GPS status, satellite fix quality, positional accuracy, elevation, and speed." data-scroll-target="section-1-top-search-bar--telemetry-overlay">
+                                        <div class="flex items-center gap-1 text-red-500">
+                                            <span class="material-symbols-outlined text-[14px]">sensors_off</span>
+                                            <span class="flex flex-col leading-tight"><span>No fix</span><span class="text-[8px] font-medium text-gray-400">SAT</span></span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-red-500">
+                                            <span class="material-symbols-outlined text-[14px]">my_location</span>
+                                            <span class="flex flex-col leading-tight"><span>±20 m</span><span class="text-[8px] font-medium text-gray-400">ACC</span></span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-gray-800 border-l border-gray-300 pl-2">
+                                            <span class="material-symbols-outlined text-[14px]">landscape</span>
+                                            <span class="flex flex-col leading-tight"><span>H: ±20 m</span><span class="text-gray-400 text-[8px] font-medium">V: 119 m</span></span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-gray-800 border-l border-gray-300 pl-2">
+                                            <span class="material-symbols-outlined text-[14px]">explore</span>
+                                            <span class="flex flex-col leading-tight"><span>0.7 km/h</span><span class="text-gray-400 text-[8px] font-medium">93°</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Row 3: Coordinate Info -->
+                                    <div class="flex items-center justify-between px-3 py-2 demo-element bg-white" data-title="Location Card" data-desc="Displays the current crosshair coordinates and reverse-geocoded address.">
+                                        <div class="flex flex-col pt-2">
+                                            <span class="text-[11px] font-bold text-gray-900">21.683223, 86.090381</span>
+                                            <span class="text-[10px] text-gray-500 font-medium">Unnamed Road, Rengalbeda, Odisha 758081, India</span>
+                                        </div>
+                                        <span class="bg-blue-50 text-blue-600 px-2 py-0.5 rounded text-[10px] font-bold border border-blue-200 cursor-pointer hover:bg-blue-100 demo-element" data-title="Format Toggle" data-desc="Switch coordinate format between DD, DMS, and UTM.">DD</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Crosshair -->
+                            <div class="absolute inset-0 z-10 pointer-events-none flex items-center justify-center -mt-16">
+                                <div class="relative flex items-center justify-center group demo-element pointer-events-auto" data-title="Map Crosshair" data-desc="The central aiming reticle for dropping points or measuring distances exactly where you look.">
+                                    <div class="w-8 h-8 rounded-full border border-white flex items-center justify-center bg-black/20 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                                        <div class="w-1.5 h-1.5 bg-white rounded-full shadow-sm"></div>
+                                        <div class="w-full h-px bg-white/70 absolute"></div>
+                                        <div class="h-full w-px bg-white/70 absolute"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Google Maps Logo Overlay -->
+                            <div class="absolute bottom-16 left-2 z-10 bg-white/90 backdrop-blur rounded px-2 py-1 flex items-center gap-1 shadow-sm demo-element cursor-pointer" data-title="Basemap Attribution" data-desc="Required mapping provider attribution.">
+                                <span class="material-symbols-outlined text-blue-600 text-[12px]">info</span>
+                                <span class="text-[9px] font-bold text-gray-700">© Google Maps</span>
+                            </div>
+                            
+                            <!-- Right Floating Action Buttons & Speed Dial -->
+                            <div class="absolute right-2 bottom-16 z-20 flex flex-col items-end gap-3 pb-2">
+                                <!-- Track -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Track Logger" data-desc="Starts recording a continuous GPS path as a polyline feature." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Track</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Track Logger" data-desc="Starts recording a continuous GPS path as a polyline feature.">
+                                        <span class="material-symbols-outlined text-[20px]">directions_walk</span>
+                                    </button>
+                                </div>
+                                <!-- Measure Area -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Measure Area" data-desc="Launches polygonal surface area calculation mode." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Measure Area</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Measure Area" data-desc="Launches polygonal surface area calculation mode.">
+                                        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">add_box</span>
+                                    </button>
+                                </div>
+                                <!-- Measure -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Measure Distance" data-desc="Launches linear measurement ruler mode." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Measure</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Measure Distance" data-desc="Launches linear measurement ruler mode.">
+                                        <span class="material-symbols-outlined text-[20px]">straighten</span>
+                                    </button>
+                                </div>
+                                <!-- Circle -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Circle Tool" data-desc="Prompts for radius (meters) and drops a circular boundary around selected point." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Circle</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Circle Tool" data-desc="Prompts for radius (meters) and drops a circular boundary around selected point.">
+                                        <span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+                                    </button>
+                                </div>
+                                <!-- Area -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Area Tool" data-desc="Directly launches Polygon drawing mode." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Area</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Area Tool" data-desc="Directly launches Polygon drawing mode.">
+                                        <span class="material-symbols-outlined text-[20px]" style="border: 1px dashed currentColor; border-radius: 2px;">crop_square</span>
+                                    </button>
+                                </div>
+                                <!-- Line -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Line Tool" data-desc="Directly launches Polyline drawing mode." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Line</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Line Tool" data-desc="Directly launches Polyline drawing mode.">
+                                        <span class="material-symbols-outlined text-[20px] -rotate-45">horizontal_rule</span>
+                                        <div class="absolute w-1 h-1 bg-black rounded-full top-[12px] right-[12px]"></div>
+                                        <div class="absolute w-1 h-1 bg-black rounded-full bottom-[12px] left-[12px]"></div>
+                                    </button>
+                                </div>
+                                <!-- Point -->
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-[#2a2a2a]/90 backdrop-blur text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md demo-element cursor-pointer" data-title="Point Tool" data-desc="Directly launches Point creation mode." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">Point</div>
+                                    <button class="w-[42px] h-[42px] bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:text-blue-500 demo-element cursor-pointer border border-gray-100" data-title="Point Tool" data-desc="Directly launches Point creation mode.">
+                                        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                    </button>
+                                </div>
+                                <!-- Main Speed Dial Trigger (Teal) -->
+                                <div class="flex items-center mt-1">
+                                    <button class="w-[50px] h-[50px] bg-teal-500 rounded-full shadow-xl flex items-center justify-center text-white hover:bg-teal-600 transition-colors demo-element cursor-pointer" data-title="Main FAB" data-desc="Primary toggle for all quick GIS creation tools (Speed Dial stack)." data-scroll-target="section-4-floating-gis-speed-dial-fab-stack">
+                                        <span class="material-symbols-outlined text-[24px]">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Navigation Bar -->
+                            <div class="absolute bottom-0 w-full bg-white h-16 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] z-20 flex items-center justify-between px-2 pb-2 pt-1 border-t border-gray-100">
+                                <div class="flex flex-col items-center justify-center w-1/5 text-blue-600 cursor-pointer demo-element" data-title="Map Tab" data-desc="The main workspace for map navigation and editing.">
+                                    <span class="material-symbols-outlined text-[24px] mb-0.5" style="font-variation-settings: 'FILL' 1;">map</span>
+                                    <span class="text-[10px] font-bold">Map</span>
+                                </div>
+                                <div class="flex flex-col items-center justify-center w-1/5 text-gray-500 hover:text-gray-800 cursor-pointer demo-element" data-title="Layers Manager" data-desc="Control visibility, styling, and rendering order of all vector & raster layers.">
+                                    <span class="material-symbols-outlined text-[24px] mb-0.5" style="font-variation-settings: 'FILL' 1;">layers</span>
+                                    <span class="text-[10px] font-bold">Layers</span>
+                                </div>
+                                <div class="flex flex-col items-center justify-center w-1/5 text-gray-500 hover:text-gray-800 cursor-pointer demo-element" data-title="Data Console" data-desc="Access the tabular view of the SQLite database and run batch operations.">
+                                    <span class="material-symbols-outlined text-[24px] mb-0.5">build</span>
+                                    <span class="text-[10px] font-bold">Console</span>
+                                </div>
+                                <div class="flex flex-col items-center justify-center w-1/5 text-gray-500 hover:text-gray-800 cursor-pointer demo-element" data-title="Cloud Sync" data-desc="Push and pull changes to/from the MapCraft Cloud or Enterprise Server.">
+                                    <span class="material-symbols-outlined text-[24px] mb-0.5">sync</span>
+                                    <span class="text-[10px] font-bold">Sync</span>
+                                </div>
+                                <div class="flex flex-col items-center justify-center w-1/5 text-gray-500 hover:text-gray-800 cursor-pointer demo-element" data-title="More Options" data-desc="Access application settings, logs, and user profile management.">
+                                    <span class="material-symbols-outlined text-[24px] mb-0.5">menu</span>
+                                    <span class="text-[10px] font-bold">More</span>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- ================= DRAWER PANEL ================= -->
+                            
+                            <!-- Drawer Overlay (Darkens background when open) -->
+                            <div id="demo-drawer-overlay" class="absolute inset-0 bg-black/40 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+                            
+                            <!-- The Drawer Itself -->
+                            <div id="demo-drawer" class="absolute top-0 left-0 w-[85%] h-full bg-[#f8f9fa] z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col font-sans">
+                                <!-- Drawer Header (Blue) -->
+                                <div class="bg-[#00478f] text-white px-4 py-3 flex items-center justify-between shadow-md">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-red-500 text-[20px]">location_on</span>
+                                        </div>
+                                        <div class="flex flex-col demo-element cursor-pointer" data-title="Project Selector" data-desc="Switch between active mapping projects or create new ones." data-scroll-target="section-1-top-search-bar--telemetry-overlay">
+                                            <span class="font-bold text-[14px] leading-tight">Project 1</span>
+                                            <span class="text-[10px] text-blue-100">MapCraft GIS • 917 features</span>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-[24px] cursor-pointer" onclick="document.getElementById('demo-drawer').classList.add('-translate-x-full'); document.getElementById('demo-drawer-overlay').classList.remove('opacity-100'); document.getElementById('demo-drawer-overlay').classList.add('opacity-0', 'pointer-events-none');">menu</span>
+                                </div>
+                                
+                                <!-- Account Row -->
+                                <div class="bg-white px-4 py-3 flex items-center gap-3 border-b border-gray-200 demo-element cursor-pointer" data-title="Account Profile" data-desc="Manage cloud account, syncing, and team collaboration." data-scroll-target="section-21-global-application-settings--preferences">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden border border-gray-300 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-gray-500 text-[20px]">person</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[12px] font-bold text-gray-800 leading-tight">demo@mapcraft.com</span>
+                                        <span class="text-[10px] text-gray-500">Sync features: Not Available</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Basemap & Settings -->
+                                <div class="bg-[#f4f7fb] px-4 py-3 flex items-center justify-between border-b border-gray-200">
+                                    <div class="flex items-center gap-3 demo-element cursor-pointer" data-title="Basemap Settings" data-desc="Switch active basemap style (Satellite, Terrain, Dark Mode)." data-scroll-target="section-2-right-quick-action-controls">
+                                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                            <span class="material-symbols-outlined text-[18px]">layers</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-[12px] font-bold text-gray-800 leading-tight">Google Hybrid</span>
+                                            <span class="text-[10px] text-gray-500">4 folders</span>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-gray-600 text-[20px] cursor-pointer hover:text-blue-600 demo-element" data-title="App Settings" data-desc="Global settings (Units, Snapping, FTP, etc.)" data-scroll-target="section-21-global-application-settings--preferences">settings</span>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="grid grid-cols-2 gap-2 p-3 border-b border-gray-200 bg-white">
+                                    <button class="flex items-center justify-center gap-2 border border-gray-200 rounded-full py-1.5 text-[11px] font-bold text-gray-700 hover:bg-gray-50 demo-element" data-title="Import Data" data-desc="Import shapefiles, GeoJSON, KML, or CSV data." data-scroll-target="section-19-multi-format-gis-import--export-pipeline">
+                                        <span class="material-symbols-outlined text-blue-600 text-[14px]">save</span> Import
+                                    </button>
+                                    <button class="flex items-center justify-center gap-2 border border-gray-200 rounded-full py-1.5 text-[11px] font-bold text-gray-700 hover:bg-gray-50 demo-element" data-title="Export Data" data-desc="Export your project vectors to standard GIS formats." data-scroll-target="section-19-multi-format-gis-import--export-pipeline">
+                                        <span class="material-symbols-outlined text-green-500 text-[14px]">share</span> Export
+                                    </button>
+                                    <button class="flex items-center justify-center gap-2 border border-gray-200 rounded-full py-1.5 text-[11px] font-bold text-gray-700 hover:bg-gray-50 demo-element" data-title="New Folder" data-desc="Create a new root folder for organizing features.">
+                                        <span class="material-symbols-outlined text-yellow-500 text-[14px]" style="font-variation-settings: 'FILL' 1;">folder</span> Folder
+                                    </button>
+                                    <button class="flex items-center justify-center gap-2 border border-gray-200 rounded-full py-1.5 text-[11px] font-bold text-gray-700 hover:bg-gray-50 demo-element" data-title="New Subfolder" data-desc="Create a nested child folder.">
+                                        <span class="material-symbols-outlined text-purple-500 text-[14px]">add_circle</span> Subfolder
+                                    </button>
+                                </div>
+                                
+                                <!-- Folder Search -->
+                                <div class="px-3 py-2 bg-white flex flex-col gap-1 border-b border-gray-200 shadow-sm z-10">
+                                    <span class="text-[10px] font-bold text-gray-600 px-1">Search folder</span>
+                                    <div class="relative w-full">
+                                        <span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-gray-400 text-[14px]">search</span>
+                                        <input type="text" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-1.5 pl-7 pr-3 text-[11px] focus:outline-none focus:border-blue-500" placeholder="Type name">
+                                    </div>
+                                </div>
+                                
+                                <!-- Folder List -->
+                                <div class="flex-1 overflow-y-auto bg-white px-2 py-2 flex flex-col gap-1 pb-16">
+                                    
+                                    <!-- Folder: All Markers -->
+                                    <div class="flex items-center justify-between border border-blue-200 bg-blue-50 rounded-lg py-2 pr-3 pl-1 relative overflow-hidden demo-element cursor-pointer" data-title="Root Folder" data-desc="View all features aggregated across all folders.">
+                                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500"></div>
+                                        <div class="flex items-center gap-3 pl-2">
+                                            <div class="w-6 h-6 rounded bg-blue-100 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-blue-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">folder</span>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[12px] font-bold text-gray-800 leading-tight">All Markers</span>
+                                                <span class="text-[10px] text-gray-500">917 features</span>
+                                            </div>
+                                        </div>
+                                        <span class="material-symbols-outlined text-blue-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                                    </div>
+                                    
+                                    <!-- Folder: Camera -->
+                                    <div class="flex items-center justify-between border border-gray-200 rounded-lg py-2 px-3 hover:bg-gray-50 transition-colors demo-element cursor-pointer" data-title="Folder: Camera" data-desc="Automatically generated folder containing all geo-tagged photos taken in this project." data-scroll-target="section-11-backup-manager">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-gray-400 text-[16px]">chevron_right</span>
+                                            <div class="w-6 h-6 rounded bg-red-100 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-red-500 text-[14px]" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[12px] font-bold text-gray-800 leading-tight">Camera</span>
+                                                <span class="text-[10px] text-gray-500">31 features</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-blue-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                                            <span class="material-symbols-outlined text-gray-400 text-[18px]">more_vert</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Folder: Default folder -->
+                                    <div class="flex items-center justify-between border border-gray-200 rounded-lg py-2 px-3 hover:bg-gray-50 transition-colors">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-gray-400 text-[16px]">chevron_right</span>
+                                            <div class="w-6 h-6 rounded bg-green-100 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-green-600 text-[14px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[12px] font-bold text-gray-800 leading-tight">Default folder</span>
+                                                <span class="text-[10px] text-gray-500">9 features</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-blue-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                                            <span class="material-symbols-outlined text-gray-400 text-[18px]">more_vert</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Folder: KEONJHAR(T) -->
+                                    <div class="flex items-center justify-between border border-gray-200 rounded-lg py-2 px-3 hover:bg-gray-50 transition-colors">
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-gray-400 text-[16px]">chevron_right</span>
+                                            <div class="w-6 h-6 rounded bg-green-100 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-green-600 text-[14px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[12px] font-bold text-gray-800 leading-tight">KEONJHAR(T)</span>
+                                                <span class="text-[10px] text-gray-500">851 features</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-blue-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                                            <span class="material-symbols-outlined text-gray-400 text-[18px]">more_vert</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dynamic Tooltip Overlay (Compact & High Contrast - Fixed Position) -->
+                            <div id="demo-tooltip" class="fixed w-max max-w-[220px] bg-gray-900/95 backdrop-blur-md rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-700 p-3 z-[9999] flex-col opacity-0 pointer-events-none transition-opacity duration-200 hidden text-left" style="top: 0; left: 0; transform: translate(-50%, 10px);">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse shadow-[0_0_8px_rgba(96,165,250,0.8)]"></div>
+                                    <h4 id="demo-title" class="font-bold text-white text-[13px] tracking-tight m-0 leading-none">Tool Name</h4>
+                                </div>
+                                <p id="demo-desc" class="text-[11px] text-gray-300 leading-snug font-medium m-0 whitespace-normal">Description goes here.</p>
+                                <div id="demo-link-container" class="hidden mt-2 pt-2 border-t border-gray-700/50">
+                                    <button id="demo-link-btn" class="w-full bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 text-blue-300 text-[10px] font-bold py-1.5 rounded-lg flex items-center justify-center gap-1 transition-colors">
+                                        Read more <span class="material-symbols-outlined text-[12px]">menu_book</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                }
+
+                // 2. Interactive DOM Tree Parser
+                if (typeof codeText === 'string' && codeText.includes('PROJECT TAXONOMY & FOLDERS')) {
+                    const lines = codeText.split('\n');
+                    let html = `<div class="tech-border p-6 rounded-xl overflow-x-auto w-full my-8">`;
+                    html += `<ul class="font-mono text-sm space-y-1">`;
+                    let inActionSection = false;
+                    let buttonsHtml = '';
+                    
+                    for (let i = 0; i < lines.length; i++) {
+                        let line = lines[i];
+                        if (line.trim().includes('┌─') || line.trim().includes('└─')) continue;
+                        if (line.trim().includes('│ ──')) {
+                            inActionSection = true;
+                            continue;
+                        }
+                        
+                        const contentIdx = line.indexOf('│');
+                        if (contentIdx === -1) continue;
+                        let rawContent = line.substring(contentIdx + 1);
+                        
+                        if (inActionSection) {
+                            const buttonRegex = /\[(.*?)\]/g;
+                            let match;
+                            while ((match = buttonRegex.exec(rawContent)) !== null) {
+                                buttonsHtml += `<button class="text-xs bg-secondary/20 dark:bg-secondary/10 hover:bg-secondary/30 dark:hover:bg-secondary/20 text-secondary border border-secondary/60 dark:border-secondary/30 px-3 py-1.5 rounded transition-all shadow-[0_0_10px_rgba(78,222,163,0.1)] flex items-center gap-1 cursor-pointer font-bold">${match[1]}</button>`;
+                            }
+                        } else {
+                            if (rawContent.trim().length === 0) continue;
+                            if (rawContent.includes('📁')) {
+                                html += `<li class="font-bold text-secondary text-base mb-4 border-b border-black/10 dark:border-white/10 pb-2 flex items-center gap-2">${rawContent.trim()}</li>`;
+                            } else {
+                                const prefixMatch = rawContent.match(/^(\s*(?:├──|└──|│\s+)*)/);
+                                let depth = 0;
+                                let displayString = rawContent.trim();
+                                
+                                if (prefixMatch) {
+                                    const prefix = prefixMatch[1];
+                                    depth = Math.floor(prefix.length / 4);
+                                    displayString = rawContent.substring(prefix.length).trim();
+                                }
+                                
+                                let hasSettings = false;
+                                if (displayString.includes('[⚙️]')) {
+                                    hasSettings = true;
+                                    displayString = displayString.replace('[⚙️]', '').trim();
+                                }
+                                
+                                const padding = depth * 1.5;
+                                html += `<li class="flex items-center justify-between text-on-surface hover:bg-black/5 dark:bg-white/5 p-1.5 rounded group transition-colors" style="margin-left: ${padding}rem">
+                                            <div class="flex items-center gap-2">
+                                                <div class="w-4 h-4 border-l-2 border-b-2 border-black/20 dark:border-white/20 rounded-bl mr-1 -mt-2"></div>
+                                                <span class="truncate">${displayString}</span>
+                                            </div>
+                                            ${hasSettings ? `<span class="opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-secondary/60 hover:text-secondary material-symbols-outlined text-[16px]" title="Settings">settings</span>` : ''}
+                                        </li>`;
+                            }
+                        }
+                    }
+                    html += `</ul>`;
+                    if (buttonsHtml) {
+                        html += `<div class="mt-4 pt-4 border-t border-black/10 dark:border-white/10 flex flex-wrap gap-3">${buttonsHtml}</div>`;
+                    }
+                    html += `</div>`;
+                    return html;
+                }
+                
+                
+                // 3. Universal ASCII Box Parser
+                if (typeof codeText === 'string' && codeText.includes('┌─') && codeText.includes('└─')) {
+                    const lines = codeText.split('\n');
+                    let html = `<div class="tech-border p-6 rounded-xl overflow-x-auto w-full my-8 font-mono text-sm space-y-4">`;
+                    
+                    for (let i = 0; i < lines.length; i++) {
+                        let line = lines[i];
+                        
+                        // Skip pure border lines
+                        if (line.includes('┌─') || line.includes('└─') || line.includes('├─')) continue;
+                        
+                        // Extract content between vertical bars if present
+                        let rawContent = line;
+                        const firstPipe = line.indexOf('│');
+                        const lastPipe = line.lastIndexOf('│');
+                        
+                        if (firstPipe !== -1 && lastPipe !== -1 && firstPipe !== lastPipe) {
+                            rawContent = line.substring(firstPipe + 1, lastPipe).trimEnd();
+                        } else if (firstPipe !== -1) {
+                            rawContent = line.substring(firstPipe + 1).trimEnd();
+                        }
+                        
+                        let trimmedContent = rawContent.trim();
+                        if (!trimmedContent) continue;
+                        
+                        // Parse buttons [text]
+                        const buttonRegex = /\[([^\]]+)\]/g;
+                        let processedContent = trimmedContent.replace(buttonRegex, (match, p1) => {
+                            if (p1.length < 2) return match; 
+                            return `<button class="inline-flex items-center gap-1 text-xs bg-secondary/20 dark:bg-secondary/10 hover:bg-secondary/30 text-secondary border border-secondary/60 px-2 py-1 rounded shadow-sm mx-1 cursor-pointer font-bold transition-colors">${p1}</button>`;
+                        });
+                        
+                        // Identify if it's a list item
+                        if (trimmedContent.startsWith('- ')) {
+                            processedContent = `<div class="flex items-center gap-3 text-on-surface-variant ml-4 border-l-2 border-black/10 dark:border-white/10 pl-3 py-1">${processedContent.substring(2)}</div>`;
+                        } 
+                        // Header / Title detection
+                        else if (trimmedContent.match(/^[\p{Emoji}\s]+[A-Z]/u) || trimmedContent.match(/^[A-Z\s&]+$/)) {
+                            processedContent = `<div class="font-bold text-secondary text-base mb-2 border-b border-black/10 dark:border-white/10 pb-2 flex items-center gap-2">${processedContent}</div>`;
+                        } 
+                        // Default text
+                        else {
+                            processedContent = `<div class="text-on-surface ml-2">${processedContent}</div>`;
+                        }
+                        
+                        html += processedContent;
+                    }
+                    html += `</div>`;
+                    return html;
+                }
+
+                if (originalCodeRenderer) return originalCodeRenderer.call(this, tokenOrCode, lang, isEscaped);
+                return `<pre><code>${escapeHtml(codeText)}</code></pre>`;
+            };
             
-            // Inject into layout
-            contentDiv.innerHTML = `<div class="markdown-body w-full pb-32 animate-fade-in-up">${htmlContent}</div>`;
+            contentDiv.innerHTML = `<div class="markdown-body w-full pb-32">${marked.parse(md, { renderer })}</div>`;
             
-            // Generate Sidebar dynamically based on parsed H2 tags!
-            if (toc.length > 0) {
-                sidebarList.innerHTML = toc.map((item, index) => 
-                    `<li class="doc-sidebar-link ${index === 0 ? 'active' : ''}" onclick="scrollToHeader('${item.slug}', this)">
-                        ${item.text}
-                    </li>`
-                ).join('');
-            } else {
-                sidebarList.innerHTML = `<li class="text-on-surface-variant/50 italic">No sections found.</li>`;
+            if (tocList) {
+                if (key === 'manual') {
+                    let html = '';
+                    let currentChapterId = null;
+                    toc.forEach((item, i) => {
+                        if (item.level === 1) {
+                            if (currentChapterId) html += `</div></div>`; // Close previous subchapters
+                            currentChapterId = item.slug;
+                            html += `
+                            <div class="sidebar-chapter mb-2" data-chapter="${item.slug}">
+                                <div class="doc-sidebar-link font-bold text-on-surface flex justify-between items-center py-2 px-2 hover:bg-black/5 dark:bg-white/5 rounded cursor-pointer transition-all" onclick="toggleChapter('${item.slug}', true); scrollToId('${item.slug}')">
+                                    <span class="truncate pr-2"><span class="material-symbols-outlined text-[14px] mr-2 align-middle text-secondary/60">menu_book</span>${item.text}</span>
+                                    <span class="material-symbols-outlined text-[16px] expand-icon transition-transform duration-300">expand_more</span>
+                                </div>
+                                <div class="sidebar-subchapters hidden flex-col pl-6 mt-1 space-y-1 border-l border-black/10 dark:border-white/10 ml-3" id="sub-${item.slug}">`;
+                        } else if (item.level === 2 && currentChapterId) {
+                            html += `
+                                    <div class="doc-sidebar-sublink text-[12px] text-on-surface-variant/70 hover:text-secondary cursor-pointer py-1.5 pl-2 border-l-2 border-transparent hover:border-secondary transition-colors" onclick="scrollToId('${item.slug}')" data-target="${item.slug}">
+                                        ${item.text}
+                                    </div>`;
+                        }
+                    });
+                    if (currentChapterId) html += `</div></div>`;
+                    tocList.innerHTML = html;
+                } else {
+                    tocList.innerHTML = toc.map((item, i) => 
+                        `<li class="doc-sidebar-link ${i===0?'active':''}" onclick="scrollToId('${item.slug}', this)">
+                            <span class="material-symbols-outlined text-[14px] mr-1 align-middle text-secondary/60">menu_book</span>
+                            ${item.text}
+                        </li>`
+                    ).join('');
+                }
+            }
+            
+            setupObserver();
+            setupScrollSpy(contentId);
+        } catch(e) {
+            console.error(e);
+            contentDiv.innerHTML = `<div class="tech-border p-8 rounded-xl text-error"><p>Failed to load <code>${markdownFiles[key]?.path}</code>. Debug: ${e.message}</p></div>`;
+        }
+    }
+
+    async function loadFaqAccordion() {
+        const container = document.getElementById('faq-container');
+        try {
+            const md = await fetchMarkdown('faq');
+            const lines = md.split('\n');
+            let html = '';
+            let currentCategory = '';
+            let currentQ = '';
+            let currentA = '';
+
+            function flushQA() {
+                if (currentQ) {
+                    html += `<div class="faq-item tech-border rounded-xl p-6 cursor-pointer" onclick="this.classList.toggle('open')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-on-surface font-mono text-sm flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">help_outline</span>${currentQ}</h3>
+                            <span class="material-symbols-outlined text-on-surface-variant faq-icon">add</span>
+                        </div>
+                        <div class="faq-answer text-body-sm text-on-surface-variant/80 font-light border-l-2 border-secondary/50 dark:border-secondary/20 pl-4">${currentA.trim()}</div>
+                    </div>`;
+                }
+                currentQ = ''; currentA = '';
             }
 
-            setupObserver(); // re-observe newly injected content
+            lines.forEach(line => {
+                if (line.startsWith('## ')) {
+                    flushQA();
+                    currentCategory = line.replace('## ', '').trim();
+                    html += `<h3 class="font-headline-md text-xl font-semibold text-primary mt-10 mb-4 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">folder_open</span>${currentCategory}</h3>`;
+                } else if (line.startsWith('### Q:') || line.startsWith('### ')) {
+                    flushQA();
+                    currentQ = line.replace('### Q: ', '').replace('### ', '').trim();
+                } else if (line.startsWith('**A**:') || line.startsWith('**A:**') || line.startsWith('**Symptom**') || line.startsWith('**Cause**') || line.startsWith('**Resolution**')) {
+                    currentA += marked.parse(line);
+                } else if (line.trim() === '---') {
+                    // skip
+                } else if (line.trim() && currentQ) {
+                    currentA += marked.parse(line);
+                }
+            });
+            flushQA();
+            container.innerHTML = html || '<p class="text-on-surface-variant">No FAQ data found.</p>';
+        } catch(e) {
+            container.innerHTML = `<div class="tech-border p-8 rounded-xl text-error"><p>Failed to load FAQ. ${e.message}</p></div>`;
+        }
+    }
 
-        } catch (error) {
-            contentDiv.innerHTML = `
-                <div class="tech-border p-8 rounded-xl text-error">
-                    <h3 class="font-bold font-mono text-xl mb-4">Error 404: Database Not Found</h3>
-                    <p>Failed to read from <code>${markdownFiles[tabKey]?.path}</code>.</p>
-                    <p class="mt-4 text-sm opacity-80 text-on-surface-variant">Note: Modern browsers block local file loading via JavaScript (CORS). You must run this site through a local server.</p>
-                    <div class="mt-4 bg-black/40 p-4 rounded font-mono text-sm text-secondary">
-                        <p># Python</p>
-                        <p>python -m http.server 8000</p>
-                        <br/>
-                        <p># NodeJS</p>
-                        <p>npx serve</p>
-                    </div>
-                </div>`;
-            sidebarList.innerHTML = '';
-        } finally {
-            setTimeout(() => loader.classList.add('hidden'), 300); // slight delay for smooth visual transition
+    async function loadFeatures() {
+        const container = document.getElementById('dynamic-features');
+        if (!container) return;
+        try {
+            const md = await fetchMarkdown('features');
+            const lines = md.split('\n');
+            let html = '';
+            
+            const iconMap = {
+                'core': 'layers',
+                'creation': 'polyline',
+                'editing': 'design_services',
+                'pen': 'edit',
+                'input': 'touch_app',
+                'data': 'list_alt',
+                'organization': 'folder',
+                'utilities': 'build',
+                'sync': 'sync',
+                'exports': 'share'
+            };
+            
+            let currentIcon = 'star';
+            
+            lines.forEach(line => {
+                if (line.startsWith('## ')) {
+                    const category = line.replace('## ', '').trim().toLowerCase();
+                    currentIcon = 'star';
+                    for (const [key, icon] of Object.entries(iconMap)) {
+                        if (category.includes(key)) { currentIcon = icon; break; }
+                    }
+                } else if (line.startsWith('- **') || line.startsWith('* **')) {
+                    const match = line.match(/^[-*]\s+\*\*(.+?)\*\*:\s*(.+)/);
+                    if (match) {
+                        const featureName = match[1];
+                        const featureDesc = match[2];
+                        const shortDesc = featureDesc.split('.')[0] + '.';
+                        html += `<div class="tech-border p-6 rounded-xl group cursor-pointer feature-card" onclick="this.classList.toggle('open')">
+                            <div class="flex items-center gap-4 mb-2"><div class="p-2 bg-secondary/20 dark:bg-secondary/10 rounded-lg border border-secondary/50 dark:border-secondary/20"><span class="material-symbols-outlined text-secondary">${currentIcon}</span></div><h3 class="font-bold text-on-surface font-mono text-sm">${featureName}</h3></div>
+                            <p class="text-body-sm text-on-surface-variant/80 font-light">${shortDesc}</p>
+                            <div class="feature-detail text-body-sm text-on-surface-variant/70 border-l-2 border-secondary/50 dark:border-secondary/20 pl-4 mt-2">${featureDesc}</div>
+                        </div>`;
+                    }
+                }
+            });
+            
+            container.innerHTML = html || '<p class="col-span-2 text-on-surface-variant">No features found.</p>';
+        } catch(e) {
+            container.innerHTML = `<div class="col-span-2 tech-border p-8 rounded-xl text-error"><p>Failed to load features. ${e.message}</p></div>`;
+        }
+    }
+
+    async function loadTutorials() {
+        const container = document.getElementById('tutorials-content');
+        const tocList = document.getElementById('tutorials-toc');
+        if (!container) return;
+        try {
+            const md = await fetchMarkdown('tutorials');
+            const lines = md.split('\n');
+            let headerHtml = '';
+            let gridHtml = '';
+            let tocHtml = '';
+            
+            let currentTitle = '';
+            let currentDesc = '';
+            let currentLink = '';
+            let tocIndex = 0;
+            
+            function flushVid() {
+                if (currentTitle && currentLink) {
+                    const match = currentLink.match(/v=([a-zA-Z0-9_-]+)/);
+                    const vidId = match ? match[1] : '';
+                    if (vidId) {
+                        const slug = currentTitle.toLowerCase().replace(/[^\w]+/g, '-');
+                        
+                        tocHtml += `<li class="doc-sidebar-link ${tocIndex===0?'active':''}" onclick="scrollToId('${slug}', this)">
+                            <span class="material-symbols-outlined text-[14px] mr-1 align-middle text-secondary/60">play_circle</span>
+                            ${currentTitle}
+                        </li>`;
+                        tocIndex++;
+                        
+                        gridHtml += `
+                        <div id="${slug}" class="tech-border rounded-xl overflow-hidden flex flex-col group hover:border-secondary/50 transition-all shadow-lg scroll-animate">
+                            <div class="aspect-video bg-black relative w-full">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/${vidId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow bg-surface/50 border-t border-black/10 dark:border-white/5">
+                                <h2 class="font-bold text-on-surface font-mono text-[15px] mb-2">${currentTitle}</h2>
+                                <p class="text-body-sm text-on-surface-variant/80 font-light leading-relaxed">${currentDesc}</p>
+                            </div>
+                        </div>`;
+                    }
+                }
+                currentTitle = ''; currentDesc = ''; currentLink = '';
+            }
+
+            lines.forEach(line => {
+                if (line.startsWith('# ')) {
+                    headerHtml += `<h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-4 flex items-center gap-4 pb-4 border-b border-black/10 dark:border-white/5">
+                        <span class="text-secondary font-mono text-xl bg-secondary/20 dark:bg-secondary/10 p-2 rounded"><span class="material-symbols-outlined">smart_display</span></span> ${line.replace('# ', '').trim()}
+                    </h2>`;
+                } else if (line.trim().length > 0 && !line.startsWith('## ') && !line.startsWith('**') && !line.startsWith('# ')) {
+                    headerHtml += `<p class="text-on-surface-variant/80 font-light mb-8 text-lg">${line.trim()}</p>`;
+                } else if (line.startsWith('## ')) {
+                    flushVid();
+                    currentTitle = line.replace('## ', '').trim();
+                } else if (line.startsWith('**Description:**')) {
+                    currentDesc = line.replace('**Description:**', '').trim();
+                } else if (line.startsWith('**Watch:**')) {
+                    const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
+                    if (linkMatch) currentLink = linkMatch[2];
+                }
+            });
+            flushVid();
+            
+            container.innerHTML = headerHtml + `<div class="grid sm:grid-cols-2 gap-8 w-full pb-32">${gridHtml}</div>`;
+            if (tocList) tocList.innerHTML = tocHtml;
+            
+            setupObserver();
+            setupScrollSpy('tutorials-content');
+        } catch(e) {
+            container.innerHTML = `<div class="tech-border p-8 rounded-xl text-error"><p>Failed to load tutorials. ${e.message}</p></div>`;
         }
     }
 
     async function fetchMarkdown(key) {
-        if (markdownFiles[key].cache !== null) {
-            return markdownFiles[key].cache;
-        }
-        const response = await fetch(markdownFiles[key].path, {
-            cache: 'no-cache',
-            headers: { 'Accept': 'text/plain, text/markdown, */*' }
-        });
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        if (markdownFiles[key].cache !== null) return markdownFiles[key].cache;
+        const response = await fetch(markdownFiles[key].path, { cache: 'no-cache', headers: { 'Accept': 'text/plain, text/markdown, */*' } });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const text = await response.text();
         markdownFiles[key].cache = text;
         return text;
     }
 
-    function scrollToHeader(slug, element) {
-        // Update active class
-        document.querySelectorAll('.doc-sidebar-link').forEach(el => el.classList.remove('active'));
-        if(element) element.classList.add('active');
-
-        // Scroll
+    function scrollToId(slug, element = null) {
+        if (element) { document.querySelectorAll('.doc-sidebar-link, .doc-sidebar-sublink').forEach(el => el.classList.remove('active')); element.classList.add('active'); }
         const header = document.getElementById(slug);
-        if (header) {
-            const y = header.getBoundingClientRect().top + window.scrollY - 120; // offset for sticky nav
-            window.scrollTo({top: y, behavior: 'smooth'});
-        }
+        if (header) window.scrollTo({ top: header.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
     }
 
-    async function performGlobalSearch(query) {
-        const loader = document.getElementById('loading');
-        const contentDiv = document.getElementById('content-display');
-        const sidebarList = document.getElementById('sidebar-list');
+    function toggleChapter(chapterId, click = false) {
+        const target = document.querySelector(`.sidebar-chapter[data-chapter="${chapterId}"]`);
+        if (!target) return;
         
-        loader.classList.remove('hidden');
-        document.getElementById('sidebar-title').innerText = "Search Results";
-        
-        document.querySelectorAll('.nav-link').forEach(el => {
-            el.classList.remove('active', 'text-secondary', 'font-medium');
-            el.classList.add('text-on-surface-variant');
-        });
+        const isOpen = target.classList.contains('open');
+        if (isOpen && click) {
+            target.classList.remove('open');
+            const sub = document.getElementById('sub-' + chapterId);
+            if(sub) { sub.style.display = 'none'; sub.classList.add('hidden'); sub.classList.remove('flex'); }
+            const icon = target.querySelector('.expand-icon');
+            if(icon) icon.style.transform = 'rotate(0deg)';
+            return;
+        }
 
+        document.querySelectorAll('.sidebar-chapter').forEach(c => {
+            c.classList.remove('open');
+            const sub = document.getElementById('sub-' + c.getAttribute('data-chapter'));
+            if(sub) { sub.style.display = 'none'; sub.classList.add('hidden'); sub.classList.remove('flex'); }
+            const icon = c.querySelector('.expand-icon');
+            if(icon) icon.style.transform = 'rotate(0deg)';
+            c.querySelector('.doc-sidebar-link').classList.remove('active');
+        });
+        
+        target.classList.add('open');
+        target.querySelector('.doc-sidebar-link').classList.add('active');
+        const sub = document.getElementById('sub-' + chapterId);
+        if(sub) { sub.style.display = 'flex'; sub.classList.remove('hidden'); sub.classList.add('flex'); }
+        const icon = target.querySelector('.expand-icon');
+        if(icon) icon.style.transform = 'rotate(180deg)';
+    }
+
+    // Scroll-Spy
+    let scrollSpyObserver = null;
+    function setupScrollSpy(containerId) {
+        if (scrollSpyObserver) scrollSpyObserver.disconnect();
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        const headings = container.querySelectorAll('h1[id], h2[id]');
+        if (headings.length === 0) return;
+        scrollSpyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const level = entry.target.tagName.toLowerCase();
+                    
+                    document.querySelectorAll('.doc-sidebar-link, .doc-sidebar-sublink').forEach(link => {
+                        link.classList.remove('active');
+                        link.style.borderColor = 'transparent';
+                        link.style.color = '';
+                        
+                        if ((link.getAttribute('onclick') && link.getAttribute('onclick').includes(id)) || link.getAttribute('data-target') === id) {
+                            link.classList.add('active');
+                            if (link.classList.contains('doc-sidebar-sublink')) {
+                                link.style.borderColor = '#4edea3';
+                                link.style.color = '#4edea3';
+                            }
+                            
+                            const chapterDiv = link.closest('.sidebar-chapter');
+                            if (window.innerWidth >= 768) {
+                                if (chapterDiv && !chapterDiv.classList.contains('open')) {
+                                    toggleChapter(chapterDiv.getAttribute('data-chapter'));
+                                }
+                                // Auto scroll sidebar to keep it in view only on desktop
+                                link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                            }
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+        headings.forEach(h => scrollSpyObserver.observe(h));
+    }
+
+    // Global Search
+    async function performGlobalSearch(query) {
+        document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+        document.getElementById('page-search').classList.add('active');
+        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+        const container = document.getElementById('search-results-container');
+        container.innerHTML = '<div class="text-center py-8"><div class="loader"></div></div>';
         try {
             let allResultsHtml = '';
-            let tocResults = [];
             const lowerQuery = query.toLowerCase();
-
             for (const key of Object.keys(markdownFiles)) {
                 const text = await fetchMarkdown(key);
-                const sections = text.split('\n\n');
-                let fileHasMatch = false;
-                let fileResults = `<div id="search-${key}" class="mb-12"><h2 class="font-headline-md text-3xl font-semibold text-on-surface mb-8 pb-4 border-b border-white/5"><span class="text-secondary font-mono text-xl bg-secondary/10 p-2 rounded">/</span> Matches in ${key}</h2><div class="space-y-4">`;
-
-                sections.forEach(section => {
-                    if (section.toLowerCase().includes(lowerQuery)) {
-                        fileHasMatch = true;
-                        let safeSection = escapeHtml(section.substring(0, 400)) + (section.length > 400 ? '...' : '');
-                        const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-                        safeSection = safeSection.replace(regex, '<span class="search-highlight">$1</span>');
-                        
-                        const snippetHtml = marked.parse(safeSection);
-                        fileResults += `<div class="tech-border p-6 rounded-xl cursor-pointer" onclick="loadTab('${key}')">${snippetHtml}</div>`;
+                const paragraphs = text.split('\n\n');
+                let fileResults = '';
+                paragraphs.forEach(p => {
+                    if (p.toLowerCase().includes(lowerQuery)) {
+                        let parsed = marked.parse(p.substring(0, 400) + (p.length > 400 ? '...' : ''));
+                        parsed = parsed.replace(new RegExp(`(?![^<]*>)(${escapeRegExp(query)})`, 'gi'), '<span class="search-highlight">$1</span>');
+                        fileResults += `<div class="tech-border p-6 rounded-xl cursor-pointer mb-4 hover:border-secondary/50 transition-all" onclick="loadTab('${key}')">${parsed}</div>`;
                     }
                 });
+                if (fileResults) allResultsHtml += `<h3 class="text-xl font-semibold text-primary mt-8 mb-4 font-mono flex items-center gap-2"><span class="material-symbols-outlined text-secondary">folder_open</span> /${key}</h3>${fileResults}`;
+            }
+            container.innerHTML = allResultsHtml || `<p class="text-on-surface-variant py-8">No results for "<strong>${escapeHtml(query)}</strong>".</p>`;
+        } catch(e) { container.innerHTML = `<p class="text-error">${e.message}</p>`; }
+    }
+    // Interactive Demo Tooltips
+    function setupDemoTooltips() {
+        document.addEventListener('click', (e) => {
+            const menuBtn = e.target.closest('#demo-menu-btn');
+            const drawer = document.getElementById('demo-drawer');
+            const overlay = document.getElementById('demo-drawer-overlay');
+            
+            if (menuBtn && drawer && overlay) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+            } else if (e.target.id === 'demo-drawer-overlay') {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
 
-                fileResults += `</div></div>`;
-                if (fileHasMatch) {
-                    allResultsHtml += fileResults;
-                    tocResults.push({ text: `Matches in /${key}`, slug: `search-${key}` });
+        document.addEventListener('mouseover', (e) => {
+            const el = e.target.closest('.demo-element');
+            if (el) {
+                const title = el.getAttribute('data-title');
+                const desc = el.getAttribute('data-desc');
+                const scrollTarget = el.getAttribute('data-scroll-target');
+                
+                const tooltip = document.getElementById('demo-tooltip');
+                const titleEl = document.getElementById('demo-title');
+                const descEl = document.getElementById('demo-desc');
+                const linkContainer = document.getElementById('demo-link-container');
+                const linkBtn = document.getElementById('demo-link-btn');
+                
+                if (tooltip && title && desc) {
+                    titleEl.textContent = title;
+                    descEl.textContent = desc;
+                    
+                    if (scrollTarget && linkContainer && linkBtn) {
+                        linkContainer.classList.remove('hidden');
+                        linkBtn.onclick = function() { scrollToId(scrollTarget); };
+                    } else if (linkContainer) {
+                        linkContainer.classList.add('hidden');
+                    }
+                    
+                    const rect = el.getBoundingClientRect();
+                    
+                    // Default position below element
+                    let top = rect.bottom + 8;
+                    let left = rect.left + (rect.width / 2);
+                    let transform = 'translate(-50%, 0)';
+                    
+                    tooltip.classList.remove('hidden');
+                    
+                    // We must wait a tick for the tooltip to have dimensions if it was hidden
+                    setTimeout(() => {
+                        const ttRect = tooltip.getBoundingClientRect();
+                        
+                        // Check if it overflows bottom
+                        if (top + ttRect.height > window.innerHeight) {
+                            top = rect.top - 8;
+                            transform = 'translate(-50%, -100%)';
+                        }
+                        
+                        // Apply position
+                        tooltip.style.top = top + 'px';
+                        tooltip.style.left = left + 'px';
+                        tooltip.style.transform = transform;
+                        
+                        tooltip.classList.remove('opacity-0');
+                        tooltip.classList.add('opacity-100');
+                    }, 10);
                 }
             }
-
-            if (allResultsHtml === '') {
-                contentDiv.innerHTML = `<div class="tech-border p-8 rounded-xl"><p class="text-on-surface-variant">No results found for "<strong>${escapeHtml(query)}</strong>".</p></div>`;
-                sidebarList.innerHTML = '';
-            } else {
-                contentDiv.innerHTML = `<div class="markdown-body w-full pb-32 animate-fade-in-up">${allResultsHtml}</div>`;
-                sidebarList.innerHTML = tocResults.map((item, index) => 
-                    `<li class="doc-sidebar-link ${index === 0 ? 'active' : ''}" onclick="scrollToHeader('${item.slug}', this)">
-                        ${item.text}
-                    </li>`
-                ).join('');
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            const el = e.target.closest('.demo-element');
+            if (el) {
+                if (e.relatedTarget && e.relatedTarget.closest('#demo-tooltip')) return;
+                const tooltip = document.getElementById('demo-tooltip');
+                if (tooltip) {
+                    tooltip.classList.remove('opacity-100');
+                    tooltip.classList.add('opacity-0');
+                    setTimeout(() => {
+                        if (tooltip.classList.contains('opacity-0')) {
+                            tooltip.classList.add('hidden');
+                        }
+                    }, 200);
+                }
             }
+        });
 
-        } catch (error) {
-            contentDiv.innerHTML = `<div class="tech-border p-8 rounded-xl text-error"><p>Search failed due to file loading errors. Ensure server is running.</p></div>`;
-        } finally {
-            loader.classList.add('hidden');
+        document.addEventListener('mouseleave', (e) => {
+            if (e.target && e.target.id === 'demo-tooltip') {
+                const tooltip = document.getElementById('demo-tooltip');
+                if (tooltip) {
+                    tooltip.classList.remove('opacity-100');
+                    tooltip.classList.add('opacity-0');
+                    setTimeout(() => {
+                        if (tooltip.classList.contains('opacity-0')) {
+                            tooltip.classList.add('hidden');
+                        }
+                    }, 200);
+                }
+            }
+        }, true);
+    }
+
+    // Sync version from changelog
+    fetchMarkdown('changelog').then(text => {
+        const match = text.match(/## \[v?([0-9]+\.[0-9]+\.[0-9]+)\]/);
+        if (match) {
+            const el = document.getElementById('app-version');
+            if (el) el.textContent = 'v' + match[1];
         }
-    }
+    }).catch(e => console.error("Could not load changelog for version sync:", e));
 
-    function escapeHtml(unsafe) {
-        return unsafe
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-    }
-    
-    function escapeRegExp(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); 
-    }
+    // Call it globally once
+    setupDemoTooltips();
+
+
+    function escapeHtml(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;"); }
+    function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
 </script>
 </body></html>
