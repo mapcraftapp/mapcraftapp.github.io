@@ -16,7 +16,8 @@ The project adheres to [Semantic Versioning](https://semver.org).
 
 ### Changed
 - Upgraded the offline caching engine for faster tile loading.
-
+### Fixed
+- Fixed r8.b.M Crash issue 
 ## [v1.3.0] - 2026-08-01
 
 ### Added
