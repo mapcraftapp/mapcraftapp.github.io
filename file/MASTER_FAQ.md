@@ -20,6 +20,10 @@
 ### Q: What coordinate system does the Target Locator use?
 **A**: Target Locator supports standard Latitude/Longitude (Decimal Degrees, DMS) and MGRS (Military Grid Reference System) coordinates.
 
+### Q: Does the crosshair move with the blue location point?
+
+**A**: Yes. When **Follow Location mode** is active, the map continuously keeps your blue GPS location centered on the screen, so the crosshair remains locked directly over the blue location point. If you manually drag or pan the map, **Follow Location mode is turned off**, allowing the blue location point to move away from the crosshair. Tapping the **Current Location** button again re-centers the map and reactivates Follow Location mode.
+
 ---
 
 ## 📶 Signal Recording & Data Export
