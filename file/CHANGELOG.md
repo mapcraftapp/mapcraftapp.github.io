@@ -25,6 +25,8 @@ The project adheres to [Semantic Versioning](https://semver.org).
 - Cloud backup integration for user projects.
 - Dark mode support for all map editing screens.
 - Map North Alignment via Current Location Button Double-Tap
+- Recent Path (Breadcrumb Trail) Backtracking
+- Track Recording Voice (TTS) & Vibration Alerts
 
 ### Changed
 - Upgraded the offline caching engine for faster tile loading.
