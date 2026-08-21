@@ -19,7 +19,7 @@ The project adheres to [Semantic Versioning](https://semver.org).
 
 ### Added
 - Native support for importing and displaying GIS PDF (GeoPDF) documents.
-- MP4 export functionality for easy sharing and exporting of map data.
+- Cinematic MapReel™ Video Generator and MP4 export functionality for easy sharing and exporting of map data.
 - Samsung S-Pen support for high-precision drawing, tapping, and map interaction.
 - Multiple new tools and methods for creating and editing polygons and lines (e.g., point-by-point, freehand, and streaming).
 - Cloud backup integration for user projects.
